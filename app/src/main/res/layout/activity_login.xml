@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorButton"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="@dimen/llbackicon_width"
+        android:layout_height="@dimen/llbackicon_height"
+        android:layout_margin="@dimen/llbackicon_margin"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/backicon_width"
+            android:layout_height="@dimen/backicon_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back" />
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:background="@color/colorLoginbg">
+
+        <ImageView
+            android:layout_above="@+id/edURLPath"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logo" />
+        <EditText
+            android:id="@+id/edURLPath"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:layout_above="@+id/edCompanyEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorWhite"
+            android:hint="@string/base_url"
+            android:inputType="textUri"
+            android:paddingLeft="@dimen/ed_paddingleft"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <EditText
+
+            android:layout_marginTop="@dimen/component_margin"
+            android:id="@+id/edCompanyEmail"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:layout_above="@+id/edUsername"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorWhite"
+            android:hint="@string/enter_compnay_emial"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="@dimen/ed_paddingleft"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/edUsername"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:layout_above="@+id/edPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@color/colorWhite"
+            android:hint="@string/user_name"
+            android:inputType="text"
+            android:paddingLeft="@dimen/ed_paddingleft"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:layout_above="@+id/checkBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@color/colorWhite"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/ed_paddingleft"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <CheckBox
+            android:layout_above="@+id/checkBoxRemember"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:id="@+id/checkBox"
+            android:text="@string/title_rastarant"
+            />
+        <CheckBox
+            android:layout_above="@+id/llLogin"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:id="@+id/checkBoxRemember"
+            android:text="@string/title_rememberme"
+            />
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSignup"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/components_margintop"
+            android:layout_marginTop="@dimen/components_margintop"
+
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorButton"
+                android:text="@string/login"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_above="@+id/tvForgotPassword"
+            android:id="@+id/btnSignup"
+            android:layout_width="@dimen/ed_width"
+            android:layout_height="@dimen/component_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/components_margintop"
+            android:background="@color/colorButton"
+            android:text="@string/signup"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_marginBottom="@dimen/components_margintop"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/paddingmargin"
+            android:paddingTop="@dimen/paddingmargin"
+            android:text="@string/forgotPassword"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <TextView
+
+            android:layout_marginBottom="@dimen/components_margintop"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/paddingmargin"
+            android:paddingTop="@dimen/paddingmargin"
+            android:text="@string/buildNo"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+    </RelativeLayout>
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_height"
+        android:layout_height="@dimen/progreeview_width"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/CircularProgress"
+
+        />
+
+</FrameLayout>

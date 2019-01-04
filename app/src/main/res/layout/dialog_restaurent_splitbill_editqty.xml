@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrey">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Qty :"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <Spinner
+            android:gravity="center"
+            android:id="@+id/spinQty"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+        </Spinner>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:id="@+id/llBottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary">
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="update"
+                android:layout_marginRight="10dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+            <Button
+                android:layout_gravity="end"
+                android:id="@+id/btnClose"
+                android:layout_toLeftOf="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/close"
+                android:layout_marginRight="10dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/components_margintop"></View>
+    </LinearLayout>
+</RelativeLayout>

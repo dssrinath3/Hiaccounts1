@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/lllist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginBottom="65dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+               >
+
+                <LinearLayout
+                    android:id="@+id/llFloor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/paddingmargin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/paddingmargin"
+                        android:id="@+id/btnSelectCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_floor"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/primaryText"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview_floor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:scrollIndicators="none"
+                        android:scrollbars="none">
+
+                    </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+              >
+
+                <LinearLayout
+                    android:id="@+id/llTable"
+                    android:layout_margin="@dimen/paddingmargin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/paddingmargin"
+                            android:text="@string/select_table"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/primaryText"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollIndicators="none"
+                        android:scrollbars="none">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <com.rey.material.widget.ProgressView
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/progreeview_width"
+            android:layout_height="@dimen/progreeview_width"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:pv_autostart="true"
+            app:pv_circular="true"
+            app:pv_progressMode="indeterminate"
+            app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+    </FrameLayout>
+    <LinearLayout
+        android:background="@color/colorGrey"
+        android:id="@+id/llBottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"></View>
+
+        <RelativeLayout
+            android:layout_margin="@dimen/paddingmargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/close"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+            <Button
+                android:id="@+id/btnChangeTable"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Change Table"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            ></View>
+    </LinearLayout>
+</RelativeLayout>
+
+

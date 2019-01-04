@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+
+        <TextView
+            android:id="@+id/tvSalesDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="Date"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tvSalesSqNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="SONo"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <TextView
+            android:id="@+id/tvSalesItemName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="ItemName"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <TextView
+            android:id="@+id/tvSalesCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="CustomerName"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <TextView
+            android:id="@+id/tvSalesTotalAmt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="TotalAmount"
+            android:textAppearance="?android:textAppearanceSmall" />
+        <TextView
+            android:id="@+id/tvSalesStatus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="Status"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+    </LinearLayout>
+</LinearLayout>

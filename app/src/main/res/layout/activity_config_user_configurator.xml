@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+
+    <ScrollView
+        android:layout_above="@+id/ll1"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@color/colorGrey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                              android:text="@string/userconfigurator_cashaccount"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edCashAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:drawableRight="@drawable/ic_down"
+                        android:paddingRight="10dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/userconfigurator_bankaccount"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edBankAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:drawableRight="@drawable/ic_down"
+                        android:paddingRight="10dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_Priority"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_unitprice"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinUnitPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_Discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_discount"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinDiscount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_Cess"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_cess"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinCess"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_UOM"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_uom"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinUOM"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_Tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_tax"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinTax"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_date"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_PaymentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_paymenttype"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinPaymentType"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_Quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_quantity"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinQuantity"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/id_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_description"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        style="@style/spinner_style"
+                        android:id="@+id/spinDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/userconfigurator_printtype"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:id="@+id/radioBtnNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="@string/userconfigurator_normal"
+                                android:layout_margin="5dp"/>
+
+
+                            <RadioButton
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:id="@+id/radioBtnPOS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="@string/userconfigurator_pos"
+                                android:layout_margin="5dp"
+                                android:checked="true"/>
+
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/save"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/close"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+</RelativeLayout>

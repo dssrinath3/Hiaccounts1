@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:id="@+id/ll_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/ed_searchitem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="@dimen/paddingmargin"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/btn_searchitem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/paddingmargin"
+                    android:layout_weight="1"
+                    android:background="@color/colorButton"
+                    android:text="@string/select_item"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:id="@+id/tv_selectcustomer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableRight="@drawable/ic_down"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/paddingmargin"
+                    android:paddingRight="@dimen/paddingmargin"
+                    android:text="Select Customer"
+                    android:textColor="@color/colorBlack" />
+
+                <Spinner
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:id="@+id/spinner_items"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginLeft="@dimen/layoutmargin"
+                    android:layout_weight="1"></Spinner>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/components_margintop">
+
+                <ListView
+                    android:id="@+id/listview_orderitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/ll_total"
+                    android:scrollIndicators="none"></ListView>
+
+                <LinearLayout
+                    android:id="@+id/ll_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/total_amount"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/ed_totalamount"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/chkBoxAdvancePayments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/layoutmargin"
+                        android:text="@string/advancePayment"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_alignParentBottom="true"
+                        android:weightSum="3">
+
+                        <Button
+                            android:id="@+id/btn_clearall"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.70"
+                            android:background="@color/colorButton"
+                            android:padding="@dimen/tvpadding"
+                            android:text="@string/clearall"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorWhite" />
+
+                        <Button
+
+                            android:id="@+id/btn_savesalesorder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/paddingmargin"
+                            android:layout_weight="1.30"
+                            android:background="@color/colorButton"
+                            android:padding="@dimen/tvpadding"
+                            android:text="@string/saveSalesOrder"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+
+                            />
+
+                        <Button
+                            android:id="@+id/btn_checkout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/paddingmargin"
+                            android:layout_weight="1"
+                            android:background="@color/colorButton"
+                            android:padding="@dimen/tvpadding"
+                            android:text="@string/checkout"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+</FrameLayout>

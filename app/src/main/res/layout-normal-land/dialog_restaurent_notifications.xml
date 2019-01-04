@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:weightSum="2">
+        <LinearLayout
+            android:layout_weight="1.7"
+            android:background="#e2e4fe"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <ListView
+                android:layout_marginBottom="50dp"
+                android:layout_margin="@dimen/tvpadding"
+                android:id="@+id/id_listview_notifications"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:dividerHeight="10dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/id_notification_text"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="Notifications not available."/>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:id="@+id/llBottomLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:background="@color/colorPrimary"></View>
+
+            <RelativeLayout
+                android:layout_margin="@dimen/paddingmargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/components_margintop">
+
+                <Button
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:id="@+id/btnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/component_height"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/close"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorWhite" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/components_margintop"></View>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

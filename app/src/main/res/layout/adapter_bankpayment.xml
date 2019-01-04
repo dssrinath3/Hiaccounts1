@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_centerVertical="true"
+            android:id="@+id/edAccountName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:hint="@string/select_account"
+            android:background="@color/colorWhite" />
+
+        <EditText
+            android:visibility="visible"
+            android:id="@+id/edBankName"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginLeft="@dimen/paddingmargin"
+            android:layout_marginRight="@dimen/paddingmargin"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:hint="@string/bank_name"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <EditText
+            android:digits=".01234567890"
+            android:inputType="numberDecimal"
+            android:visibility="visible"
+            android:id="@+id/edBankAmount"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginLeft="@dimen/paddingmargin"
+            android:layout_marginRight="@dimen/paddingmargin"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:singleLine="true"
+            android:hint="@string/card_amount"
+            android:textAppearance="?android:textAppearanceSmall" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:visibility="visible"
+            android:layout_weight="1.2"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_centerVertical="true"
+            android:id="@+id/ed_transacionno"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:hint="@string/transactionnumber"
+            android:background="@color/colorWhite" />
+
+        <EditText
+            android:visibility="visible"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:id="@+id/edBankDate"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginLeft="@dimen/paddingmargin"
+            android:layout_marginRight="@dimen/paddingmargin"
+            android:layout_weight="1.2"
+            android:background="@color/colorWhite"
+            android:drawableRight="@drawable/ic_calender"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:singleLine="true"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="@dimen/paddingmargin"
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_minus"
+                android:id="@+id/imageview_removebank"
+                android:layout_toLeftOf="@+id/imageview_addcard"
+                />
+            <ImageView
+                android:visibility="visible"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_plus"
+                android:id="@+id/imageview_addbank" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--    <EditText
+            android:layout_weight="1.2"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:inputType="text"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_centerVertical="true"
+            android:id="@+id/ed_transacionno"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:hint="@string/transactionnumber"
+            android:background="@color/colorWhite"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/ed_cardamount"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/paddingmargin"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginLeft="@dimen/paddingmargin"
+            android:layout_marginRight="@dimen/paddingmargin"
+            android:layout_toLeftOf="@+id/imageview_removecard"
+            android:layout_toRightOf="@+id/ed_transacionno"
+            android:layout_weight="1.2"
+            android:background="@color/colorWhite"
+            android:digits="0123456789."
+            android:hint="@string/card_amount"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:textAppearance="?android:textAppearanceSmall"
+
+            />
+
+        <LinearLayout
+            android:gravity="end"
+            android:layout_marginRight="@dimen/paddingmargin"
+            android:layout_weight="0.50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_minus"
+                android:id="@+id/imageview_removecard"
+                android:layout_toLeftOf="@+id/imageview_addcard"
+                />
+            <ImageView
+                android:visibility="visible"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_plus"
+                android:id="@+id/imageview_addcard" />
+
+        </LinearLayout>-->
+</LinearLayout>

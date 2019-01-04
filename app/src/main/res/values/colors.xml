@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1795c5</color>
+    <color name="colorPrimaryDark">#a9d6ff</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="colorAppIntro">#2c437b</color>
+    <color name="colorDimmedBg">#80000000</color>
+
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#F7F7F7</color>
+    <color name="colorContinuebtn">#ECECEC</color>
+
+    <color name="colorCheckbox">#E0E0E0</color>
+    <color name="colorButton">#1795c5</color>
+    <color name="colorLoginbg">#a6d4fb</color>
+
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_background_pressed">#d8d8d8</color>
+    <color name="list_background">#fff</color>
+    <color name="list_item_title">#d3d3d3</color>
+
+    <color name="color_genral_inforamtion_text">#949494</color>
+
+
+    <color name="paginetionButtonInvisible">#d9d9d9</color>
+    <color name="paginetionButtonVisible">#1795c5</color>
+
+    <color name="colorLassi">#FFC004</color>
+    <color name="colorFalloda">#ffe200</color>
+    <color name="colorKulfi">#8CD34F</color>
+    <color name="colorProtein">#03B150</color>
+    <color name="colorIcecream">#09AFEC</color>
+    <color name="colorMocktails">#0D6CB9</color>
+    <color name="colorJuice">#001857</color>
+    <color name="colorNoIceSugar">#C70302</color>
+    <color name="colorColdCoffee">#72319E</color>
+    <color name="colorSmoothie">#BE0007</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lightgrey">#d3d3d3</color>
+    <color name="lightskyblue">#8CD34F</color>
+    <color name="pink">#80ffc0cb</color>
+    <color name="aquamarine">#807fffd4</color>
+    <color name="paleturquoise">#80afeeee</color>
+
+    <color name="disabled_text">#404285f4</color>
+
+    <string-array name="colors">
+        <item>#FF0000</item>
+        <item>#00FF00</item>
+        <item>#0000FF</item>
+        <item>#FFC004</item>
+        <item>#42F4CE</item>
+        <item>#03B150</item>
+        <item>#1795c5</item>
+        <item>#C70302</item>
+        <item>#3361FF</item>
+        <item>#D133FF</item>
+        <item>#949494</item>
+        <item>#FF337A</item>
+        <item>#0E6834</item>
+        <item>#610E68</item>
+        <item>#FFFF04</item>
+        <item>#FF0000</item>
+        <item>#00FF00</item>
+        <item>#0000FF</item>
+        <item>#FFC004</item>
+        <item>#42F4CE</item>
+        <item>#03B150</item>
+        <item>#1795c5</item>
+        <item>#C70302</item>
+        <item>#3361FF</item>
+        <item>#D133FF</item>
+        <item>#949494</item>
+        <item>#FF337A</item>
+        <item>#0E6834</item>
+        <item>#610E68</item>
+        <item>#FFFF04</item>
+    </string-array>
+    <color name="trans_black_75">#BF000000</color>
+
+    <color name="trans_black_50">#80000000</color>
+
+    <color name="trans_black_25">#40000000</color>
+    <color name="chrome_grey">#F2F2F2</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="secondary_text_transparent_70">#B3727272</color>
+</resources>

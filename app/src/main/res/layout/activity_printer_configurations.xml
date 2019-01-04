@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <RelativeLayout
+
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+         <LinearLayout
+             android:layout_below="@+id/toolbar"
+             android:id="@+id/singlePrinter"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+             <LinearLayout
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:weightSum="2">
+
+                 <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="@dimen/component_height"
+                     android:layout_weight="1"
+                     android:id="@+id/tvPrinter"
+                     android:text="Printer"
+                     android:textColor="@color/black"
+                     android:textSize="18sp"
+                     android:textStyle="bold"
+                     android:gravity="center"/>
+
+                 <Spinner
+                     android:id="@+id/spinnerPrinter"
+                     style="@style/spinner_style"
+                     android:layout_width="0dp"
+                     android:layout_height="@dimen/component_height"
+                     android:layout_weight="1"
+                     android:paddingLeft="@dimen/ed_paddingleft" />
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:gravity="center">
+                 <RadioGroup
+
+                     android:id="@+id/radioGroup"
+                     android:orientation="horizontal"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+
+                     <RadioButton
+                         android:id="@+id/radioBtn3Pos"
+                         android:text="@string/pos_3inch"
+                         android:layout_width="100dp"
+                         android:onClick="onRadioButtonClicked"
+                         android:layout_height="wrap_content" />
+
+
+                     <RadioButton
+                         android:id="@+id/radioBtn2Pos"
+                         android:layout_width="100dp"
+                         android:text="@string/pos_2inch"
+                         android:onClick="onRadioButtonClicked"
+                         android:layout_height="wrap_content" />
+
+
+
+                 </RadioGroup>
+             </LinearLayout>
+         </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+                android:id="@+id/multiplePrinter"
+                android:layout_below="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:id="@+id/kotPrinter1"
+                        android:text="Kot Printer1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerKotPrinter1"
+                        style="@style/spinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <RadioGroup
+
+                        android:id="@+id/radioGroupKot1"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioBtn3PosKot1"
+                            android:text="@string/pos_3inch"
+                            android:layout_width="100dp"
+                            android:onClick="onRadioButtonKot1Clicked"
+                            android:layout_height="wrap_content" />
+
+
+                        <RadioButton
+                            android:id="@+id/radioBtn2PosKot1"
+                            android:layout_width="100dp"
+                            android:text="@string/pos_2inch"
+                            android:onClick="onRadioButtonKot1Clicked"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:id="@+id/kotPrinter2"
+                        android:text="Kot Printer2"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerKotPrinter2"
+                        style="@style/spinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <RadioGroup
+
+                        android:id="@+id/radioGroupKot2"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioBtn3PosKot2"
+                            android:text="@string/pos_3inch"
+                            android:layout_width="100dp"
+                            android:onClick="onRadioButtonKot2Clicked"
+                            android:layout_height="wrap_content" />
+
+
+                        <RadioButton
+                            android:id="@+id/radioBtn2PosKot2"
+                            android:layout_width="100dp"
+                            android:text="@string/pos_2inch"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonKot2Clicked"
+                            />
+
+
+
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:id="@+id/billPrinter"
+                        android:text="Bill Printer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerBillPrinter"
+                        style="@style/spinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <RadioGroup
+
+                        android:id="@+id/radioGroupBill"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioBtn3PosBill"
+                            android:text="@string/pos_3inch"
+                            android:layout_width="100dp"
+                            android:onClick="onRadioButtonBillClicked"
+                            android:layout_height="wrap_content" />
+
+
+                        <RadioButton
+                            android:onClick="onRadioButtonBillClicked"
+                            android:id="@+id/radioBtn2PosBill"
+                            android:layout_width="100dp"
+                            android:text="@string/pos_2inch"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

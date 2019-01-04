@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/delete_items"
+    android:icon="@drawable/ic_delete_white"
+    android:title=""
+    app:showAsAction="always"/>
+    <!--android:icon="@drawable/ic_content_save"-->
+    <item
+    android:id="@+id/save_order"
+        app:showAsAction="always"
+    android:title=""
+    />
+    <item
+        android:id="@+id/changeCompany"
+        app:showAsAction="collapseActionView"
+        android:title="Settings"
+        />
+
+    <item
+        android:id="@+id/logout"
+        app:showAsAction="collapseActionView"
+        android:title="Log out"
+        />
+
+
+
+
+
+</menu>

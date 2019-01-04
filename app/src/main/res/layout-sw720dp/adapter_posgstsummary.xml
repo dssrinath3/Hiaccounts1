@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/chkbxSelection"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <TextView
+            android:id="@+id/tvGSTSummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.25"
+            android:padding="@dimen/tvpadding"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/posText" />
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/tvGSTAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textSize="@dimen/posText"/>
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/tvGSTTax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textSize="@dimen/posText" />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

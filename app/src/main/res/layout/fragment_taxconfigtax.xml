@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <LinearLayout
+
+        android:layout_alignParentTop="true"
+        android:id="@+id/llTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <Button
+            android:id="@+id/btnActivate"
+            android:text="@string/activate"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/btnDeactivate"
+            android:text="@string/deactiviate"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="2dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="@string/add"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="2dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll"
+        android:layout_above="@+id/llPaginationView"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/colorWhite"
+            android:dividerHeight="2dp"
+            android:scrollIndicators="none">
+
+
+        </ListView>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:src="@drawable/ic_plus_white"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimary"
+            fab:fab_colorRipple="@color/colorPrimary" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/llTopLayout"
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/component_height"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+
+                android:id="@+id/edSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/llSearch"
+                android:background="@color/colorWhite"
+                android:hint="Search Tax"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <LinearLayout
+                android:id="@+id/llSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorWhite"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_search" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/llPaginationView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <TextView
+            android:id="@+id/tvFirst"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="First"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <TextView
+            android:id="@+id/tvPrev"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Prev"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tvPageNo"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textColor="@color/colorBlack"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Next"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+        <TextView
+            android:id="@+id/tvLast"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Last"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

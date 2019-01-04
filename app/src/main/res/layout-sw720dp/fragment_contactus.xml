@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    >
+
+
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactUsHeader"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactUsHeader1"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <View
+
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+
+            />
+
+
+
+        <ListView
+            android:id="@+id/lvCompany"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:dividerHeight="2dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

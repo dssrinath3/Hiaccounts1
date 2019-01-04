@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <!--the shadow comes from here-->
+        <item
+
+            android:bottom="0dp"
+            android:drawable="@drawable/list_bg"
+            android:left="0dp"
+            android:right="0dp"
+            android:top="0dp">
+        </item>
+
+        <item
+            android:bottom="0dp"
+            android:left="0dp"
+            android:right="0dp"
+            android:top="0dp">
+
+            <!--whatever you want in the background, here i preferred solid white -->
+            <shape
+                android:shape="rectangle">
+                <solid android:color="@android:color/white" />
+                <corners android:radius="0dp" />
+
+            </shape>
+
+        </item>
+        <item
+            android:right="10dp"
+            >
+
+            <bitmap
+                android:tint="@color/color_genral_inforamtion_text"
+                android:gravity="center_vertical|right"
+                android:src="@drawable/ic_down"
+
+                android:layout_width="match_parent" />
+
+
+        </item>
+    </layer-list>
+
+
+
+
+

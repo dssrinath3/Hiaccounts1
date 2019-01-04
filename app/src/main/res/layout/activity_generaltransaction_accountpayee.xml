@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llSearch"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/components_margintop"
+                >
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height">
+
+                    <EditText
+                        android:imeOptions="actionSearch"
+                        android:layout_toLeftOf="@+id/imgviewSearch"
+                        android:id="@+id/edSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:background="@color/colorWhite"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:hint="Search" />
+
+                    <ImageView
+                        android:background="@color/colorWhite"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/imgviewSearch"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="25dp"
+                        android:layout_height="@dimen/component_height"
+                        android:src="@drawable/ic_search"
+                        />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/llSearch"
+                android:id="@+id/llListView"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/accountCode"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tvAccountCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/accountName"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tvAccountName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:text="@string/caccountType"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tvAccountType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    >
+
+                </ListView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <com.rey.material.widget.ProgressView
+            android:id="@+id/progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:pv_autostart="true"
+            app:pv_circular="true"
+            app:pv_progressMode="indeterminate"
+            app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorGrey">
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageview_close"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:text="@string/inventory_addsalesdiscount"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorBlack" />
+
+                <ImageView
+                    android:id="@+id/imagwviewClose"
+                    android:layout_width="@dimen/imageview_iconwidth"
+                    android:layout_height="@dimen/imageview_iconheight"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_close" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_header"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/llCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/inventory_salescustomername"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+
+
+                android:id="@+id/edSalesCName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/llCategoryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCategoryName"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/inventory_salesitemname"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/edSalesIName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/llCategoryStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCategoryDescription"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top"
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/inventory_salesdiscounttype"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupDisType"
+                android:background="@color/colorGrey"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:id="@+id/rdBtnPercentage"
+                    android:text="@string/inventory_salesdiscountpercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:id="@+id/rdBtnAmount"
+                    android:text="@string/inventory_salesdiscountamt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/llDiscountValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCategoryStatus"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top"
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/inventory_salesdiscounttype"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/edSaleDiscountValue"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/llDiscountFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llDiscountValue"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top"
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/inventory_salesdiscountfrom"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:paddingRight="5dp"
+                android:drawableRight="@drawable/ic_calender"
+                android:id="@+id/edSaleDiscountFrom"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/llDiscountTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llDiscountFrom"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top"
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/inventory_salesdiscountfrom"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:drawableRight="@drawable/ic_calender"
+                android:paddingRight="5dp"
+                android:id="@+id/edSaleDiscountTo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceMedium"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/ll1"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@color/colorButton"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/save"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@color/colorButton"
+                android:padding="@dimen/tvpadding"
+                android:text="@string/close"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+</FrameLayout>

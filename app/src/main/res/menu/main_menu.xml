@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/create_pos"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/create_pos" />
+        <item
+            android:id="@+id/return_items"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/return_item" />
+        <item
+            android:id="@+id/invoke_orders"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/invoke_order" />
+        <item
+            android:id="@+id/clear_invokeorder"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/clear_invokeorder" />
+        <item
+            android:id="@+id/services"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/services" />
+        <item
+            android:id="@+id/reciept_printing"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/reciept_printing" />
+        <item
+            android:id="@+id/log_out"
+            android:actionMenuTextColor="@color/colorWhite"
+            android:title="@string/log_out" />
+
+
+    </group>
+
+
+</menu>

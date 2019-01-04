@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/inventory_assests_categoryname"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edAssestCategoryName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/ll1"
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/inventory_assests_categorydescription"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edAssestsCategoryDescritpion"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/typeId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/id_default_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/tvpadding"
+                    android:text="@string/inventory_assests_categorymenustatus"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkbox_type"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/typeId"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Status"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerStatus"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/ed_paddingleft" />
+            </LinearLayout>
+            <View
+                android:layout_above="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/components_margintop"></View>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/close"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_toLeftOf="@+id/btnClose"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Save"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorWhite" />
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <com.rey.material.widget.ProgressView
+
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/progreeview_width"
+            android:layout_height="@dimen/progreeview_width"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:pv_autostart="true"
+            app:pv_circular="true"
+            app:pv_progressMode="indeterminate"
+            app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    </FrameLayout>
+
+</RelativeLayout>

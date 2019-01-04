@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/component_height"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/tvSupplierName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_down"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/paddingmargin"
+                android:text="Select Supplier"
+                android:textColor="@color/colorBlack"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/imgview_addcustomer"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/imgview_addcustomer"
+                android:layout_toStartOf="@+id/imgview_addcustomer"
+                android:layout_weight="1"
+                android:background="@color/colorGrey">
+
+                <EditText
+                    android:id="@+id/ed_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/imgviewSearch"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/imgviewSearch"
+                    android:layout_toStartOf="@+id/imgviewSearch"
+                    android:background="@color/colorGrey"
+                    android:hint="@string/search_invoice"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/imgviewSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/colorGrey"
+                    android:padding="@dimen/paddingmargin"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_search" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listviewPaymentList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:background="@color/colorGrey"
+            android:dividerHeight="3dp"
+            android:scrollIndicators="none"></ListView>
+
+    </LinearLayout>
+
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+</FrameLayout>

@@ -1,0 +1,1682 @@
+<resources>
+
+
+    <string name="app_name">HiAccounts</string>
+    <string name="intro_next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+
+    <string name="nav_item_hiposretail">Hinext Sales</string>
+    <string name="nav_item_hiposrastaurent">Hinext Restaurant</string>
+    <string name="nav_item_hipospurchase">Hinext Purchase</string>
+    <string name="nav_item_report">Payment Reports</string>
+    <string name="nav_item_abouthiaccount">About Us</string>
+    <string name="nav_item_help">Help</string>
+    <string name="nav_item_contactus">Contact Us</string>
+    <string name="nav_item_logout">Logout</string>
+
+
+    <string name="salesChart">Sales</string>
+    <string name="purchaseChart">Purchase</string>
+
+    <string name="navitemDashboard">Dashboard</string>
+    <string name="navitemSales">Sales</string>
+    <string name="navitemPurchases">Purchases</string>
+    <string name="navitemRestaurant">Restaurant</string>
+    <string name="navitemService">Service</string>
+    <string name="navitemTransaction">General Transaction</string>
+    <string name="navitemInventory">Inventory</string>
+    <string name="navitemManufacturing">Manufacturing</string>
+    <string name="navitemCRM">CRM</string>
+    <string name="navitemTax">Tax</string>
+    <string name="navitemControlPanel">Control Panel</string>
+    <string name="navitemContact">Contact</string>
+    <string name="navitemReport">Report</string>
+    <string name="navitemHelp">Help</string>
+    <string name="navitemLogOut">Log Out</string>
+    <string-array name="nav_drawer_labels">
+        <item>@string/navitemDashboard</item>
+        <item>@string/navitemSales</item>
+        <item>@string/navitemPurchases</item>
+        <item>@string/navitemTransaction</item>
+        <item>@string/navitemInventory</item>
+        <item>@string/navitemTax</item>
+        <item>@string/navitemControlPanel</item>
+        <item>@string/navitemContact</item>
+        <item>@string/navitemReport</item>
+        <item>@string/navitemHelp</item>
+    </string-array>
+
+    <string name="reportPurchase">Purchase</string>
+    <string name="reportPurSupplierSalesReport">Supplier Sales Report</string>
+    <string name="reportPurReceiveItem">Receive Item Listing</string>
+    <string name="reportPurSupplierStatment">Supplier Statement Listing</string>
+    <string name="reportPurPO">Purchase Order Listing</string>
+    <string name="reportPurSuppliers">Supplier Listing</string>
+    <string name="reportPurInvoices">Purchase Invoice Listing</string>
+    <string name="reportPurReturn">Purchase Return Listing</string>
+    <string name="reportPurSuppPayments">Supplier Payment</string>
+    <string name="reportPurCreditors">Creditors Ageing</string>
+    <string name="reportPurAdjusment">Purchase Adjustment</string>
+    <string name="reportPurCancelledInovices">Cancelled Purchase Invoice</string>
+
+    <string name="reportSales">Sales</string>
+    <string name="reportSalesQuotation">Sales Quotation Register</string>
+    <string name="reportSalesOrders">Sales Order Register</string>
+    <string name="reportSalesOrdersDetails">Sales Order Details Register</string>
+    <string name="reportSalesItemCommission">Item Commission Register</string>
+    <string name="reportSalesInvoices">Sales Invoice Register</string>
+    <string name="reportSalesReturn">Sales Return Register</string>
+    <string name="reportSalesDelivery">Product Delivery Register</string>
+    <string name="reportSalesCustomerStatement">Customer Statement</string>
+    <string name="reportSalesPaymentReport">Payment Report</string>
+    <string name="reportSalesPrice">Price Register</string>
+    <string name="reportSalesCommissionAging">Commission Aging</string>
+    <string name="reportSalesDebtorsAging">Debtors Aging</string>
+    <string name="reportSalesCustomers">Customer Register</string>
+    <string name="reportSalesAgent">Agent Register</string>
+    <string name="reportSalesPatient">Patient Register</string>
+    <string name="reportSalesCustomerPayment">Customer Payment</string>
+    <string name="reportSalesAdjustment">Sales Adjustment</string>
+    <string name="reportSalesCancelledInvoices">Cancelled Sales Inovice</string>
+
+    <string name="reportSRestaurent">Restaurant</string>
+    <string name="reportSRestaurentInvoiceRegister">Restaurant Invoice Register</string>
+    <string name="reportSRestaurentDayEndRegister">Restaurant DayEnd Register</string>
+    <string name="reportSRestaurentItemSales">Item Sales Report</string>
+    <string name="reportSRestaurentDayEnd">Day End Report</string>
+    <string name="reportSRestaurentMonthEnd">Month End Report</string>
+    <string name="reportSRestaurentCancelledItemReports">Cancelled Item Reports</string>
+
+    <string name="reportInventory">Inventory</string>
+    <string name="reportInvGRNValuation">GRN Valuation Report</string>
+    <string name="reportInvPlanning">Planning Report</string>
+    <string name="reportInvValuation">Valuation Report</string>
+    <string name="reportInvSales">Sales Report</string>
+    <string name="reportInvNonMovement">Non Movement Report</string>
+    <string name="reportInvMovement">Movement Report</string>
+    <string name="reportInvList">Inventory List</string>
+    <string name="reportInvOutstandingGNR">Outstanding GNR Report</string>
+    <string name="reportInvStockCheck">Stock Check Report</string>
+    <string name="reportInvAppleStock">Apple Stock Check Report</string>
+    <string name="reportInvAppleSales">Apple Sales Stock Check Report</string>
+
+    <string name="crmLeads">Leads</string>
+    <string name="crmEvent">Event</string>
+
+    <string name="reportAnalysis">Analysis</string>
+    <string name="reportAnalysisActBalance">Account Balance</string>
+    <string name="reportAnalysisCustomerReciept">Customer Receipt Report</string>
+    <string name="reportAnalysisSuppPayment">Supplier Payment Report</string>
+    <string name="reportAnalysisIncome">Income Comparison Report</string>
+    <string name="reportAnalysisExpense">Expense Comparison Report</string>
+    <string name="reportAnalysisCustInvoices">Customer Invoice Payment</string>
+    <string name="reportAnalysisSuppInovices">Supplier Inovice Paymenyt</string>
+    <string name="reportAnalysisTopVendors">Top Vendors</string>
+    <string name="reportAnalysisTopItems">Top Items</string>
+    <string name="reportAnalysisTopCustomers">Top Customers</string>
+
+    <string name="reportFinancialstatement">Financial Statement</string>
+    <string name="reportfsComprehensiveincome">Statement of Comprehensive Income</string>
+    <string name="reportfsFinancialPosition">Statement of Financial Position</string>
+    <string name="reportfsTrialBalance">Trial Balance</string>
+    <string name="reportfsGeneralLedger">General Ledger</string>
+    <string name="reportfsViewLedger">View Ledger</string>
+    <string name="reportfsJournal">General Journal</string>
+
+    <string name="reportBankReconciliation">Bank Reconciliation</string>
+    <string name="reportbkBank">Bank</string>
+    <string name="reportbkCheques">Cheques</string>
+    <string name="reportbkRatios">Ratios</string>
+
+    <string-array name="reportsSubMenu">
+        <item>@string/reportPurchase</item>
+        <item>@string/reportSales</item>
+        <item>@string/reportInventory</item>
+        <item>@string/reportAnalysis</item>
+        <item>@string/reportFinancialstatement</item>
+        <item>@string/reportBankReconciliation</item>
+    </string-array>
+    <string name="contactSupplier">Supplier</string>
+    <string name="contactCusotmer">Customer</string>
+    <string name="contactContacts">Contacts</string>
+    <string-array name="contactSubMenu">
+        <item>@string/contactSupplier</item>
+        <item>@string/contactCusotmer</item>
+        <item>@string/contactContacts</item>
+
+    </string-array>
+
+    <string name="reportsPurchase">Purchase</string>
+    <string name="reportsSales">Sales</string>
+    <string name="reportsRestaurant">Restaurant</string>
+    <string name="reportsInventory">Inventory</string>
+    <string name="reportsAnalysis">Analysis</string>
+    <string name="reportsFinancial">Financial Statement</string>
+    <string name="reportsBank">Bank Reconciliation</string>
+
+    <string name="transactionPurchase">Expenses</string>
+    <string name="transactionReceipt">Receipt</string>
+    <string name="transactionJournalEntry">Journal Entry</string>
+    <string-array name="transactionSubMenu">
+        <item>@string/transactionPurchase</item>
+        <item>@string/transactionReceipt</item>
+        <item>@string/transactionJournalEntry</item>
+    </string-array>
+
+    <string name="inventoryItem">Item</string>
+    <string name="inventoryCategory">Category</string>
+    <string name="inventoryBrand">Brand</string>
+    <string name="inventoryUOM">UOM</string>
+    <string name="inventorySalesPricing">Sales Pricing</string>
+    <string name="inventorySalesDiscountConfig">Sales Discount Configuration</string>
+    <string name="inventoryPurchasePricing">Purchase Pricing</string>
+    <string name="inventoryLocation">Inventory Location</string>
+    <string name="inventoryMovementType">Inventory Count Type</string>
+    <string name="inventoryLocationtransfer">Inventory Location Transfer</string>
+    <string name="inventoryCountAdjustment">Inventory Count Adjustment</string>
+    <string name="invnetoryProductMerger">Product Merger</string>
+    <string name="inventoryProduct">Product</string>
+    <string name="inventoryItemCommission">Item Commission</string>
+    <string name="inventoryRedemption">Redemption</string>
+
+
+    <string-array name="inventorySubMenu">
+        <item>@string/inventoryItem</item>
+        <item>@string/inventoryCategory</item>
+        <item>@string/inventoryBrand</item>
+        <item>@string/inventoryUOM</item>
+        <item>@string/inventorySalesPricing</item>
+        <item>@string/inventorySalesDiscountConfig</item>
+        <item>@string/inventoryPurchasePricing</item>
+        <item>@string/inventoryLocation</item>
+        <item>@string/inventoryMovementType</item>
+    </string-array>
+
+    <string name="taxTaxConfiguration">Tax Configuration</string>
+    <string name="taxGST">GST</string>
+    <string-array name="taxSubMenu">
+        <item>@string/taxTaxConfiguration</item>
+        <item>@string/taxGST</item>
+    </string-array>
+    <string name="taxConfigTax">Tax</string>
+    <string name="taxConfigTaxType">Tax Type</string>
+    <string name="taxGST1">GSTR-1</string>
+    <string name="taxGST1A">GSTR-1A</string>
+    <string name="taxGST2">GSTR-2</string>
+    <string name="taxGSTSummaryReport">GST Summary Report</string>
+
+    <string name="cPanelOpeningBalance">Opening Balance</string>
+    <string name="cPanelOpBalBalanceSheets">Opening Balance of Balance Sheet</string>
+    <string name="cPanelOpBalPurchaseInvoices">Opening Balance Purchase Invoice</string>
+    <string name="cPanelOpBalSalesInvocies">Opening Balance Sales Invoice</string>
+    <string name="cPanelOpBalInventory">Opening Balance of Inventory</string>
+    <string name="cPanelOpBalLastyrfigure">Enter Last Year Figure</string>
+    <string name="cPanelOpBalmonthend">Month End</string>
+    <string name="cPanelOpBalyrend">Year End</string>
+
+
+    <string name="cPanelConfigurator">Configurator</string>
+    <string name="cPanelConfigBank">Bank</string>
+    <string name="cPanelConfigAgent">Agent</string>
+    <string name="cPanelConfigCurrency">Currency</string>
+    <string name="cPanelConfigEmployee">Employee</string>
+    <string name="cPanelConfigCountry">Country</string>
+    <string name="cPanelConfigExRate">Excahnge Rate</string>
+    <string name="cPanelConfigProject">Project</string>
+    <string name="cPanelConfigShiipingMethod">Shipping Method</string>
+    <string name="cPanelConfigEmailServer">Email Server</string>
+    <string name="cPanelConfigPaymentMethod">Payment Method</string>
+    <string name="cPanelConfiguration">Configuration</string>
+    <string name="cPanelVersionControl">Version Control</string>
+    <string name="cPanelCart">Cart</string>
+    <string name="cPanelState">State</string>
+    <string name="cPanelServiceCharge">Service Charge</string>
+
+    <string name="cPanelCompnaySetup">Company Setup</string>
+    <string name="cPanelcsetupCInfo">Company Information</string>
+    <string name="cPanelcsetupFYear">Financial Year</string>
+    <string name="cPanelcsetupCharts">Chart of Accounts</string>
+    <string name="cPanelcsetupAlerts">Alerts</string>
+    <string name="cPanelcsetupHSNCode">HSN Code</string>
+    <string name="cPanelcsetupAssests">Assests</string>
+    <string name="cPanelcsetupAssestsCategory">Assests Category</string>
+    <string name="cPanelcsetupUomConvertor">UOM Convertor</string>
+    <string name="cPanelcsetupISDN">ISDN</string>
+    <string name="cPanelcsetupSalesDiscount">Sales Discount Configuration</string>
+    <string name="cPanelcsetupAdvanceDiscount">Advance Discount Configuration</string>
+    <string name="cPanelcsetupVoucher">Voucher</string>
+    <string name="cPanelcsetupLoyalty">Loyalty</string>
+    <string name="cPanelcsetupRedemption">Redemption</string>
+    <string name="cPanelcsetupAttribute">Attribute</string>
+    <string name="cPanelcsetupAttributeConfigurtor">Attribute Configurator</string>
+    <string name="cPanelcsetupPaymentVoucher">Payment Voucher</string>
+    <string name="cPanelUserAccountSetup">User Account Setup</string>
+    <string name="cPaneluseractSetup">User Account Setup</string>
+    <!--<string name="cPaneluseractAuditTrial">Audit Trial</string>-->
+
+
+    <string name="cPanelAccountMaintenance">Account Maintenance</string>
+    <string name="cPanelactmainActGrp">Account Group</string>
+    <string name="cPanelactmainCreateChart">Create Chart of Account</string>
+    <!--<string name="cPanelactmainBudget">Budget</string>-->
+
+    <string name="cPanelDisplaySetup">Display setup</string>
+    <string name="cPaneldisFormSetup">Form setup</string>
+    <string name="cPaneldisTable">Table</string>
+    <string name="cPaneldisChair">Chairs</string>
+    <string name="cPaneldisTableConfiguration">Table Configuration</string>
+    <string name="cPaneldisTermscondition">Terms and Condition</string>
+
+    <string-array name="cPanelSubMenu">
+        <item>@string/cPanelOpeningBalance</item>
+        <item>@string/cPanelConfigurator</item>
+        <item>@string/cPanelCompnaySetup</item>
+        <item>@string/cPanelUserAccountSetup</item>
+        <item>@string/cPanelAccountMaintenance</item>
+        <item>@string/cPanelDisplaySetup</item>
+    </string-array>
+
+    <string name="helpManual">Help Manual</string>
+    <string name="helpVideo">Help Video</string>
+    <string name="helpSupport">Support</string>
+    <string name="helpSubcription">Subcription</string>
+    <string-array name="helpSubMenu">
+        <item>@string/helpManual</item>
+        <item>@string/helpVideo</item>
+        <item>@string/helpSupport</item>
+        <item>@string/helpSubcription</item>
+    </string-array>
+
+    <!-- navigation drawer item labels  -->
+    <!-- <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_hiposretail</item>
+        <item>@string/nav_item_hiposrastaurent</item>
+        <item>@string/nav_item_hipospurchase</item>
+        &lt;!&ndash;<item>@string/nav_item_report</item>&ndash;&gt;
+        <item>@string/nav_item_abouthiaccount</item>
+        <item>@string/nav_item_help</item>
+        <item>@string/nav_item_contactus</item>
+        <item>@string/nav_item_logout</item>
+    </string-array>-->
+
+
+    <string name="menu_return">Return</string>
+    <string name="menu_services">Services</string>
+    <string name="menu_hinextsales">Hinext Sales</string>
+    <string name="menu_hinextpurchase">Hinext Purchase</string>
+    <string name="menu_invokeorder">Invoke Order</string>
+    <string name="menu_printlist">Print List</string>
+    <string name="menu_recieptpayment">Reciept Payment</string>
+    <string name="menu_advancepaymentlist">Advance PaymentList</string>
+    <string name="menu_invokesalesorder">Invoke Sales Order</string>
+    <string name="menu_clearinvokeorder">Clear Invoke Order</string>
+
+    <string name="menu_duplicatesalesorder">Duplicate Sales Order</string>
+    <string name="menu_duplicatesalesreturn">Duplicate Sales Return</string>
+    <string name="menu_duplicatesalesinvoice">Duplicate Sales Invoice</string>
+    <string name="menu_invokerepairlist">Invoke Repair List</string>
+    <string name="menu_invokereplacelist">Invoke Replace</string>
+
+    <string name="menu_invoice">Print List</string>
+    <string name="menu_dialyreport">Daily Report</string>
+    <string name="menu_splitbill">Split Bill</string>
+    <string name="menu_restaurenttable">Restaurant Table</string>
+
+    <string-array name="elements_hiposretail">
+        <item>@string/menu_hinextsales</item>
+        <item>@string/menu_return</item>
+        <item>@string/menu_invokesalesorder</item>
+        <item>@string/menu_recieptpayment</item>
+        <item>@string/menu_advancepaymentlist</item>
+        <item>@string/menu_printlist</item>
+        <item>@string/menu_invokeorder</item>
+        <item>@string/menu_clearinvokeorder</item>
+        <!--   <item>@string/menu_services</item>-->
+    </string-array>
+
+
+    <string name="menupurchase_clearinvokeorder">Clear Invoke Order</string>
+    <string name="menupurchase_printlist">Print List</string>
+    <string name="menupurchase_services">Services</string>
+    <string name="menupurchase_invokepo">Invoke Purchase Order</string>
+    <string name="menupurchase_return">Return</string>
+    <string name="menupurchase_invokeorder">Invoke Order</string>
+    <string name="menupurchase_advancepaymentlist">Advance PaymentList</string>
+    <string name="menupurchase_supplierpayment">Supplier Payment</string>
+    <string name="menupurchase_hinextpurchase">Hinext Purchase</string>
+    <string-array name="elements_hipospurchase">
+        <item>@string/menu_hinextpurchase</item>
+        <item>@string/menupurchase_invokepo</item>
+        <item>@string/menupurchase_supplierpayment</item>
+        <item>@string/menupurchase_return</item>
+        <!--<item>@string/menupurchase_advancepaymentlist</item>-->
+        <!--<item>@string/menupurchase_printlist</item>-->
+    </string-array>
+
+    <!-- <string-array name="hiposreport">
+         <item>Purchase</item>
+         <item>Sales</item>
+         <item>Restaurant</item>
+         <item>Inventory</item>
+         <item>Analysis</item>
+         <item>Financial Statement</item>
+         <item>Bank Reconciliation</item>
+     </string-array>-->
+
+
+    <string-array name="language">
+        <item>English</item>
+        <item>Bahasa Malasiya</item>
+    </string-array>
+
+    <string name="igst">IGST</string>
+    <string name="cgst">CGST:SGST/UGST</string>
+    <string-array name="tax">
+        <item>@string/cgst</item>
+        <item>@string/igst</item>
+
+    </string-array>
+    <string name="retail_type">Retail</string>
+    <string name="service_type">Service</string>
+    <string name="foodbev_type">Food &amp; Beverages</string>
+
+    <!-- Validation Strings-->
+
+    <string name="intertnet_status">No Internet Connection. </string>
+    <string name="select_compnay_error">Select atleast one type of company </string>
+
+    <string name="validation_msg_email">Email id does not match. </string>
+    <string name="validation_msg_password">Password does not match.</string>
+    <string name="err_msg">Field not be empty</string>
+    <string name="err_msg_email">Enter Valid Email Address</string>
+    <string name="err_msg_password">Enter password</string>
+    <string name="err_msg_username">Enter user name</string>
+    <string name="err_msg_companyemail">Enter company email</string>
+    <string name="err_msg_company_name">Enter company name</string>
+    <string name="err_msg_number">Enter Valid Phone Number</string>
+
+    <string name="err_msg_baseurl">Enter base url</string>
+    <string name="err_msg_portnumber">Enter port number</string>
+    <string name="err_msg_application">Enter application name</string>
+    <string name="err_msg_outofbalance">Out of Balance shold be zero</string>
+
+    <string name="title_retail">Retail</string>
+    <string name="title_rastarant">Restaurant</string>
+    <string name="title_rememberme">Remember Me</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="log_out">Log Out</string>
+    <string name="create_pos">Create POS</string>
+    <string name="return_item">Return Items</string>
+    <string name="invoke_order">Invoke Order</string>
+    <string name="clear_invokeorder">Clear Invoke Order</string>
+    <string name="services">Service</string>
+    <string name="reciept_printing">Reciept Print</string>
+
+    <string name="OpenDrawer">Open Drawer</string>
+    <string name="ClearAll">Clear All</string>
+    <string name="SettlePayment">Settle Payment</string>
+    <string name="SplitBill">Split Bill</string>
+    <string name="Tables">Tables</string>
+    <string name="ChangeTable">Change Table</string>
+    <string name="ToTable">To Table</string>
+    <string name="FromTable">From Table</string>
+
+
+    <string name="more">More</string>
+    <string name="less">Less</string>
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+    <string name="select_item">Select Item</string>
+    <string name="select_category">Select Category</string>
+    <string name="category">Category</string>
+    <string name="itemnames">Item</string>
+    <string name="scan_item">Scan Item</string>
+    <string name="contact">Contacts</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="select_customer">Select Customer</string>
+    <string name="select_printer">Printer Configurations</string>
+    <string name="select_employee">Select Employee</string>
+    <string name="select_payment">Select Payment Method</string>
+    <string name="cash_payment">Cash Payment</string>
+    <string name="bank_payment">Bank Payment</string>
+    <string name="voucher_payment">Voucher Payment</string>
+    <string name="credit_payment">Credit Payment</string>
+    <string name="search">Search Item</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="scan_serialcode">Scan Serial Code</string>
+    <string name="checkout">Checkout</string>
+    <string name="total_amount">Total</string>
+    <string name="total_amount_pay">Amount to be pay</string>
+    <string name="freemeal">FreeMeal</string>
+
+    <string name="delivery">Delivery</string>
+
+    <string name="select_floor">Select Floor</string>
+    <string name="select_table">Select Table</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="discount">Discount</string>
+    <string name="amount_tendered">Amount Tendered</string>
+    <string name="amount_return">Amount Returned</string>
+    <string name="txn_no">Transaction No.</string>
+    <string name="vch_no">Voucher No</string>
+    <string name="vch_date">Voucher Date</string>
+    <string name="vch_amt">Voucher Amount</string>
+
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_email">Customer Email</string>
+    <string name="customer_contact">Customer Contact</string>
+    <string name="customer_address">Customer Address</string>
+    <string name="customer_gstin">GSTIN</string>
+    <string name="customer_state">State</string>
+    <string name="customer_personincharge">Person Incharge</string>
+    <string name="customer_country">Country</string>
+    <string name="customer_currency">Currency</string>
+    <string name="customer_panno">PAN No</string>
+    <string name="customer_accno">Account Number</string>
+    <string name="customer_bankname">Bank Name</string>
+    <string name="customer_bankbranch">Bank Branch</string>
+    <string name="customer_ifsccode">IFSC</string>
+    <string name="customer_website">Website</string>
+
+
+    <string name="c_name">Name</string>
+    <string name="c_email">Email</string>
+    <string name="c_contact">Contact</string>
+    <string name="c_number">Phone No</string>
+
+    <string name="return_cash_payment">Return Cash Payment</string>
+    <string name="total_amount_return">Total Amount to be return</string>
+    <string name="return_amount">Return Amount</string>
+    <string name="return_invoice">Make Return</string>
+    <string name="search_invoice">Search</string>
+    <string name="sales_invoice_no">Sales Invocie No</string>
+
+    <string name="item_description">Description</string>
+    <string name="item_unitprice">Unit Price</string>
+    <string name="item_quantity">Quantity</string>
+    <string name="item_reutnquantity">Return Quantity</string>
+    <string name="item_amtex">Amount(Ex)</string>
+    <string name="item_taxpercantage">Tax</string>
+    <string name="item_taxamt">Tax Amount</string>
+    <string name="item_amtin">Amount(In)</string>
+    <string name="item_serailnumber">Serial</string>
+
+    <string name="enter_compnay_emial">Enter company email</string>
+    <string name="enter_compnay_name">Enter company name</string>
+
+
+    <string name="base_url">Enter Base URL</string>
+    <string name="port_number">Enter port number</string>
+    <string name="application_name">Enter Application name</string>
+    <string name="company_userkey">Enter User Key</string>
+    <string name="compnay_userid">User Id</string>
+    <string name="compnay_id">Company Id</string>
+
+
+    <string name="cart_tableconfigavailbale">Table Configuration is not available.</string>
+    <string name="state_notavailbale">State is not available.</string>
+    <string name="cart_notavailbale">Cart is not available.</string>
+    <string name="pemission_denied">Oops. Denied for Scanning.</string>
+    <string name="items_notavailbale">Item is not available.</string>
+    <string name="category_notavailbale">Category is not available.</string>
+    <string name="tax_notavailbale">Tax is not available.</string>
+    <string name="brand_notavailbale">Brand is not available.</string>
+    <string name="bank_notavailbale">Bank is not available.</string>
+    <string name="user_notavailbale">User is not available.</string>
+    <string name="hsn_notavailbale">HSN Code is not available.</string>
+    <string name="emailserver_notavailbale">Email Server is not available.</string>
+    <string name="country_notavailbale">Country is not available.</string>
+    <string name="agent_notavailbale">Agent is not available.</string>
+    <string name="isdn_notavailbale">ISDN is not available.</string>
+    <string name="payment_notavailbale">Payment Method is not available.</string>
+    <string name="shipping_notavailbale">Shipping Method is not available.</string>
+    <string name="employee_notavailbale">Employee is not available.</string>
+    <string name="currency_notavailbale">Currency is not available.</string>
+    <string name="version_notavailbale">Version is not available.</string>
+    <string name="assests_notavailbale">Assests is not available.</string>
+    <string name="itemcommision_notavailbale">Item commission is not available.</string>
+    <string name="paymentVoucher_notavailbale">PaymentVoucher is not available.</string>
+    <string name="salesdiscountconfig_notavailbale">Sales Discount Configuaretion is not available.</string>
+    <string name="advancediscountconfig_notavailbale">Advance Discount Configuaretion is not available.</string>
+    <string name="loyalty_notavailbale">Loyalty is not available.</string>
+    <string name="voucher_notavailbale">Voucher is not available.</string>
+    <string name="servicecharge_notavailbale">Service Charge is not available.</string>
+    <string name="exchangerate_notavailbale">ExchangeRate is not available.</string>
+    <string name="project_notavailbale">Project is not available.</string>
+    <string name="purchaseprice_notavailbale">Purchase Price is not available.</string>
+    <string name="salesprice_notavailbale">Sales Price is not available.</string>
+    <string name="inventorylocation_notavailbale">Location is not available.</string>
+    <string name="uom_notavailbale">Unit is not available.</string>
+    <string name="attribute_notavailbale">Attribute is not available.</string>
+    <string name="attributeconfig_notavailbale">Attribute Configurator is not available.</string>
+    <string name="counttype_notavailbale">Count Type is not available.</string>
+    <string name="no_items">Your search item not available.</string>
+    <string name="leads_notavailbale">Leads is not available.</string>
+    <string name="event_notavailbale">Event is not available.</string>
+    <string name="response_error">Unable to connect server. Try again sometime later.</string>
+    <string name="credentials_error">Credentials Error. Try again.</string>
+    <string name="checkout_error">No item added. Please add one item for checkout.</string>
+    <string name="required">value must be required.</string>
+    <string name="go_back">Go Back</string>
+    <string name="submit">Submit</string>
+    <string name="signup">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="buildNo">N build - V.No - 17.1.138</string>
+
+    <string name="forgotPassword">Forgot your password?     </string>
+    <string name="continu">Continue</string>
+    <string name="inventory_notavailbale">Inventory is not available.</string>
+    <string name="quotation_notavailbale">Sales Quotation is not available.</string>
+    <string name="salesorder_notavailbale">Sales Order is not available.</string>
+    <string name="balanceshhet_notavailbale">Balance Sheet data is not available.</string>
+
+
+    <string name="save_ordername">Enter Save Order Name</string>
+    <string name="icon_cash">&#xf0d6;</string>
+    <string name="icon_credit">&#xf09d;</string>
+    <string name="icon_bank">&#xf09d;</string>
+    <string name="icon_vocher">&#xf09d;</string>
+    <string name="error_contactname">Contact name cant be empty</string>
+    <string name="error_custmorname">Customer name cant be empty</string>
+    <string name="error_suppliername">Supplier name cant be empty</string>
+    <string name="error_invoiceno">Invoice number is not present.</string>
+    <string name="error_returnquantity">Return Quantity cant be empty</string>
+    <string name="error_returnquantitynumber">Return Quantity cant be more than quantity.</string>
+
+    <string name="search_customer">Search Customer</string>
+    <string name="nocustomer_available">No Customer available.</string>
+    <string name="noaccount_available">No Account available.</string>
+    <string name="nocashaccount_available">No Cash Account available.</string>
+    <string name="nobankaccount_available">No Bank Account available.</string>
+    <string name="noaccountdetail_available">Account Detail not available.</string>
+    <string name="nocontact_available">No Contact available.</string>
+    <string name="nosupplier_available">No Supplier available.</string>
+    <string name="error_salesinvoice">Sales Invoice Number is must</string>
+    <string name="error_ordername">Order Name Cant be empty</string>
+    <string name="error_rsonsecode204">No Response Body</string>
+    <string name="response200_sessionLost">Session Lost</string>
+    <string name="select_ordernumber">Select Order Number</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="clear_invokeorder_message">Are you confirm to clear the invoke orders.</string>
+    <string name="no_orders_msg">No orders available.</string>
+    <string name="savemail"><![CDATA[Save & Email]]></string>
+    <string name="saveprint"><![CDATA[Save & Print]]></string>
+    <string name="draftprint"><![CDATA[Draft & Print]]></string>
+    <string name="cash">Cash</string>
+    <string name="card">Card</string>
+    <string name="voucher">Voucher</string>
+    <string name="card_payment">Card Payment</string>
+    <string name="payment">Payment</string>
+    <string name="card_amount">Amount</string>
+    <string name="select_account">Select Account</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="card_number">Card Number</string>
+
+    <string name="transactionnumber">Transaction No.</string>
+    <string name="voucher_number">Voucher No.</string>
+    <string name="error_numberformate">Add only numric value with one decimal.</string>
+    <string name="error_null">Some Error.Please try again.</string>
+    <string name="mode_of_payment">Mode of Payment</string>
+    <string name="voucher_amount">Voucher Amount</string>
+    <string name="card_amount1">Card Amount</string>
+    <string name="title_duplicateionvoice">Duplicate Recipet</string>
+
+    <string name="accesstoken_error">Please log in again.</string>
+    <string name="error_discountprice">Discount amount not greater than total amount</string>
+    <string name="error_tenderamount">Tender amount not less than payment amount</string>
+    <string name="advancePayment">Advance Payment</string>
+    <string name="formNo">Form No</string>
+    <string name="invoicNo">Invoice No</string>
+    <string name="totalRecieved">Total Recieved</string>
+    <string name="remainingAmount">Remaining Amount</string>
+    <string name="createInvoice">Create Invoice</string>
+    <string name="remainingPayment">Remaining Payment</string>
+    <string name="createInvoiceSuceessfully">Create invoice successfully</string>
+    <string name="amoutReturnedSuccessfylly">Amount return successfully</string>
+    <string name="titleReciept">Reciept</string>
+    <string name="compnayNumber">Company No. </string>
+    <string name="gstNumber">GST No. </string>
+    <string name="preparedBy">Prepares By</string>
+    <string name="date">Date</string>
+    <string name="transactionID">TransactionID</string>
+    <string name="billTo">Bill To</string>
+    <string name="paymentDetail">Payment Details</string>
+    <string name="address">Address</string>
+    <string name="cPhoneNumber">Phone No.</string>
+    <string name="invoiceNumber">Invoice No.</string>
+    <string name="invoiceDate">Invoice Date</string>
+    <string name="inoiceAmount">Invoice Amount</string>
+    <string name="invoiceAmountPaid">Amount Paid</string>
+    <string name="invoiceBalanceAmount">Balance Amount</string>
+    <string name="invoiceFooter">We wish you to serve you in future again. Thank you.</string>
+    <string name="rightPreserved">All Rights Reserved</string>
+    <string name="saveSalesOrder">Save Sales Order</string>
+    <string name="saveSalesOrderSucessfully">Save Sales Order Successfully.</string>
+    <string name="duplicatInvoice">Duplicate Invoice</string>
+    <string name="recievePaymentList">Recieved Payment List</string>
+    <string name="noRecieptPayment">No Recieved Payment Available</string>
+    <string name="next">NEXT</string>
+    <string name="savePurchaseOrder">Save Purchase Order</string>
+    <string name="supplierName">Supplier Name</string>
+    <string name="supplierEmail">Supplier Email</string>
+    <string name="supplierContact">Supplier Contact</string>
+    <string name="supplierAddress">Supplier Address</string>
+    <string name="supplierGSTIN">GSTIN</string>
+    <string name="supplierPersonIncharge">Person Incharge</string>
+    <string name="supplierState">State</string>
+    <string name="supplierCountry">Country</string>
+    <string name="supplierCurrency">Currency</string>
+    <string name="supplierBankName">Bank Name</string>
+    <string name="supplierAccNo">Account Number</string>
+    <string name="supplierPANNo">PAN Number</string>
+    <string name="supplierBankBranch">Bank Branch</string>
+    <string name="supplierIFSC">IFSC</string>
+    <string name="supplierWebsite">Website</string>
+
+    <string name="selectSupplier">Select Supplier</string>
+    <string name="s_contact">Contact</string>
+    <string name="s_email">Email</string>
+    <string name="s_name">Supplier Name</string>
+    <string name="add_supplier">Add Supplier</string>
+    <string name="supplierInvoiceNumber">Supplier Invoice No</string>
+    <string name="purchaseInvoiceNumber">Purchase Invoice No</string>
+    <string name="error_purchaseinvoice">Purchase Invoice Number is must</string>
+
+
+    <string name="purchasePrintlistDuplicateInovice">Duplicate Invoice</string>
+    <string name="purchasePrintlistPurchaseList">Purchase</string>
+    <string name="purchasePrintlistInventory">Inventory</string>
+    <string name="purchasePrintlistAnalysis">Analysis</string>
+    <string name="purchasePrintlistFinancialStatement">Financial Statement</string>
+    <string name="clearall">Clear All</string>
+    <string name="contactUsHeader">Get in Touch</string>
+    <string name="contactUsHeader1">Our Addresses</string>
+    <string name="HeaderAboutHiAcocunt">About Hi Accounts</string>
+    <string name="HeaderCompany">Company</string>
+    <string name="HeaderVision"><![CDATA[Vision & Mission]]></string>
+    <string name="HeaderOutTeam">Our Team</string>
+
+
+    <string name="AboutHiAcocunt">HI Accounts, an integrated and innovative accounting, billing and inventory software was conceived and designed with Malaysian chartered accountants and GST consultants in year 2014. It was approved by Royal Customs Malaysia Department (RCMD) on February 5th 2016.</string>
+
+    <string name="AboutCompany">myHyva IT Solutions Sdn Bhd, a subsidiary of Hyva IT Solutions Pvt Ltd. was established in Malaysia in 2012.
+
+Hyva IT solutions, a UK based IT solutions company stands tall amongst its peers by offering customers the dynamic combination of design and technology that boosts business with decided economic advancements. The company’s raging success has lead to its expansion to India and the results have only grown manifold thereafter. Hyva IT solutions, India is a venture started in conjunction with a $ 40 million business giant, the Vali Group.A decade long dominance in the global market has ensured the Vali group the respect and loyal customer base it enjoys today.
+
+Founded in 2003 Hyva IT solutions, a privately held company has made inroads into the Indian market backed by a team of stalwarts that have a combined professional experience of more than 43 years in the realm of CRM Software Development. With its aims set on active expansion in the IT and telecom sector in India, Hyva is charging ahead adding more facets to the existing business of CRM Software Development for call centers.Diversifying their existent portfolio of software product development with added services that include IT Infrastructure Management and a host of other exclusive IT Software Services.At Hyva we base our service model on the IT Infrastructure Library (ITIL) best practices operating via an established and proven framework that offers customers the distinct advantage of customized and cutting edge technology that adds value to their workspaces in a cost effective and timely manner. It is no wonder then that in the span of three years we have successfully serviced over 25 established customers across the European market and extended our services to over 700 satisfied users worldwide.
+
+Our 70 people strong team strives to understand the specifics of the customers’ enterprise and study the challenges of the business in the rapidly changing business environment. An onsite resource model coupled with a keen approach ensures we deliver high quality solutions that are ideal and specific to the customer in question. Hyva offers software development services that can greatly improve the course of customer business and prides itself in offering solutions that are exact in defining and satisfying every customer’s customized needs. With a finger on the pulse of IT market we are aware of the most asked-for services and choose only the proven and well-operating amongst them. Tested methodologies, innovative processes and a host of global resources ensure the latest in technology ensuring quick ramp ups and turn around results that are useful for outsourced services and tech-support management.
+
+At Hyva the focus is on acting on every possible lead to serve customers better. Our diversified section of services offers a varied range of customers the solutions to their every need. And to achieve the goals we have set for ourselves we have enlisted the help of employees that are certified by the best in the business. At Hyva IT solutions, we understand the importance of trust and business ethics to achieve mutual and stable ongoing growth. Every customer we approach, we do so, on the assumption of a long-term relationship, and fuel our individual services to our customers with the desire to develop and foster a long lasting and mutually beneficial relationship.</string>
+
+
+    <string name="AboutVision">At Hyva we strive to deliver a compelling experience to our customers through proactive and innovative processes that generate new and greater revenue opportunities and simultaneously offer cost efficient resolutions leading to a definitive edge in the market.</string>
+
+    <string name="AboutOurTeam">The single most important asset in the software consulting business is people. Offering offshore software development for European clients over the three years with a team of driven and experienced members has enabled us to now focus on the Indian market. We have made great headway into the International market with the expertise of our team in our favor.
+
+Every member stands as an integral part of the solid backbone for intra-company relationships. We do a lot to foster employee satisfaction and relationship-building, which all helps make for a stronger team. With their passion to excel and their highly qualified backgrounds each member of our team ensures that the Hyva brand stands tall amongst peers. And we endeavor to fuel their ambition and drive with innovative individual skill developmental training programs that include project management, team building drills, soft skill management programs and Entrepreneurial developmental programs.
+
+A live and active work culture ensures that a spirit of best practices and optimization of resources to produce best results is prevalent within the organization. Our insistence on a mutually beneficial work culture, effective employee support drives and emphasis on the best practices ensure a corporate environment that services the best with the best. With certification from the best in the industry – Cisco, Sun, Microsoft, HP to name a few our proactive team has supplemented their knowledge with extensive experience in working. A keen acumen and a dedicated approach to install streamlined procedures that assure quality round the clock sets our team apart from the rest in the industry.</string>
+
+    <string name="isdnstate">State*</string>
+    <string name="isdnno">ISDN NO</string>
+    <string name="isdnfromdate">From Date</string>
+    <string name="isdntodate">To Date</string>
+
+    <string name="uomconverter">UOM</string>
+    <string name="uomconvertername">UOM COnverterted Name</string>
+    <string name="uomconvertervalue">UOM Value</string>
+    <string name="uomconverterdate">Effective Date</string>
+    <string name="uomconverterstatus">Status</string>
+
+    <string name="attributeconfigname">AttributeConfiguratorName</string>
+    <string name="attributename">Attribute Name</string>
+    <string name="attributedesc">Attribute Description</string>
+    <string name="attributestatus">Status</string>
+
+    <string name="attributeConfigname">Attribute Configurator Name</string>
+    <string name="attributeConfigdesc">Attribute Configurator Description</string>
+    <string name="attributeConfigstatus">Status</string>
+
+    <string name="paymentvoucherPaymentMethod">Payment Method</string>
+    <string name="paymentvoucheramount">Amount</string>
+    <string name="paymentvoucherreason">Reason</string>
+    <string name="paymentvoucherfromdate">From Date</string>
+    <string name="paymentvouchertodate">To Date</string>
+    <string name="paymentvoucherstatus">Status</string>
+    <string name="paymentvouchertotalamount">Total Amount</string>
+    <string name="paymentvouchertaxamount">Tax Amount</string>
+
+    <string name="itemcode">Item Code/Bar Code*</string>
+    <string name="itemname">Item Name*</string>
+    <string name="qty">Qty</string>
+    <string name="totalno">Total</string>
+    <string name="itemdescriotion">Description</string>
+    <string name="itemcategory">Item Category*</string>
+    <string name="itemtype">Item Type*</string>
+    <string name="itemunit">Unit of Measurement*</string>
+    <string name="itemmsiccode">MSIC Code*</string>
+    <string name="itemhsncode">HSN Code*</string>
+    <string name="itembrandname">Brand Name*</string>
+    <string name="itemcounttype">Count Type</string>
+    <string name="itemstatus">Status</string>
+    <string name="itempurchaseprice">Purchase Pricing</string>
+    <string name="itemsalesprice">Sales Pricing</string>
+    <string name="itemprodtionitem">Production Item</string>
+    <string name="itemattribute">Attribute</string>
+    <string name="itemimputtax">Input Tax*</string>
+    <string name="itemoutputtax">Output Tax*</string>
+    <string name="itemcess">CESS(%)</string>
+    <string name="addItem">Add Item</string>
+    <string name="editItem">Edit Item</string>
+    <string name="scan">Scan</string>
+    <string name="searchItemCode">Item Code</string>
+    <string name="searchSerialCode">Serialize Number</string>
+    <string name="registration">Register Now</string>
+    <string name="mobileverify">Enter Mobile Number</string>
+    <string name="otp">Enter OTP Number</string>
+    <string name="verification">Generate OTP</string>
+    <string name="otpverify">Verify</string>
+    <string name="fromdate">From Date</string>
+    <string name="todate">To Date</string>
+    <string name="invoiceAmount">Invoice Amount</string>
+    <string name="invoiceApplied">Invoice Applied</string>
+    <string name="invoiceArBalance">ArBalance</string>
+
+    <string name="itemcommisionitemname">Item Name</string>
+    <string name="itemcommisionitemtype">Commission Type</string>
+    <string name="itemcommisionitemperc">Percentage</string>
+    <string name="itemcommisionitemamt">Amount</string>
+    <string name="itemcommisionitemvalue">Commission Value</string>
+    <string name="itemcommisionitemfromdate">From Date</string>
+    <string name="itemcommisionitemtodate">To Date</string>
+    <string name="itemcommisionitemstatus">Status</string>
+
+
+    <string name="salesdiscountconfigitemname">Item Name</string>
+    <string name="salesdiscountconfigitemtype">Discount Type</string>
+    <string name="salesdiscountconfigitemperc">Percentage</string>
+    <string name="salesdiscountconfigitemamt">Amount</string>
+    <string name="salesdiscountconfigitemvalue">Discount Value</string>
+    <string name="salesdiscountconfigitemfromdate">From Date</string>
+    <string name="salesdiscountconfigitemtodate">To Date</string>
+    <string name="salesdiscountconfigitemstatus">Status</string>
+
+
+    <string name="assestscode">Assests Code/Bar Code*</string>
+    <string name="assestsname">Assests Name*</string>
+    <string name="assestpartno">Part No</string>
+    <string name="assestsdescriotion">Description</string>
+    <string name="assestscategory">Assests Category*</string>
+    <string name="asseststype">Assests Type*</string>
+    <string name="assestsunit">Unit of Measurement*</string>
+    <string name="assestsmsiccode">MSIC Code*</string>
+    <string name="assestsbrandname">Brand Name*</string>
+    <string name="assestscounttype">Count Type</string>
+    <string name="assestsstatus">Status</string>
+    <string name="assestspurchaseprice">Purchase Pricing</string>
+    <string name="assestssalesprice">Sales Pricing</string>
+    <string name="assestsinputtax">Input Tax*</string>
+    <string name="assestsoutputtax">Output Tax*</string>
+    <string name="addAssests">Add Assests</string>
+    <string name="editAssests">Edit Assests</string>
+    <string name="searchAssests">Assests</string>
+
+    <string name="eventName">Name</string>
+    <string name="eventDate">Event Date</string>
+    <string name="eventAssignedTo">Assigned To</string>
+    <string name="eventActivitytype">Activity type</string>
+    <string name="eventFromLocation">From Location</string>
+    <string name="eventPriority">Priority</string>
+    <string name="eventNotification">Notification</string>
+
+    <string name="leadsName">Name</string>
+    <string name="leadsDate">Leads Date</string>
+    <string name="leadsDescription">Description</string>
+    <string name="leadsSubject">Subject</string>
+    <string name="leadsEmployee">Employee</string>
+
+
+    <string name="inventory_addcategory">Add Category</string>
+    <string name="inventory_categoryname">Category Name</string>
+    <string name="inventory_categorydescription">Category Description</string>
+
+    <string name="inventory_add_assests_category">Add Category</string>
+    <string name="inventory_assests_categoryname">Assest Category Name</string>
+    <string name="inventory_assests_categorydescription">Assest Category Description</string>
+    <string name="inventory_assests_categorymenustatus">Menu Status</string>
+
+
+    <string name="inventory_addbrand">Add Brand</string>
+    <string name="inventory_brandname">Brand Name</string>
+    <string name="inventory_branddescription">Brand Description</string>
+
+    <string name="inventory_adduom">Add Unit Of Measurement</string>
+    <string name="inventory_uomname">UOM Name</string>
+    <string name="inventory_uomdescription">UOM Description</string>
+    <string name="inventory_uomstatus">UOM Status</string>
+    <string-array name="status">
+        <item>Active</item>
+        <item>In-Active</item>
+    </string-array>
+
+    <string name="inventory_addsalespricing">Add Sales Pricing</string>
+    <string name="inventory_salescustomername">Customer Name</string>
+    <string name="inventory_salesitemname">Item Name</string>
+    <string name="inventory_salesprice">Price</string>
+
+    <string name="inventory_addsalesdiscount">Add Sales Discount Configuration</string>
+    <string name="inventory_salesdiscountcustomername">Customer Name</string>
+    <string name="inventory_salesdiscountitemname">Item Name</string>
+    <string name="inventory_salesdiscounttype">Discount Type</string>
+    <string name="inventory_salesdiscountpercentage">Discount Percentage</string>
+    <string name="inventory_salesdiscountamt">Amount</string>
+    <string name="inventory_salesdiscountvalue">Discount Value</string>
+    <string name="inventory_salesdiscountfrom">From Date</string>
+    <string name="inventory_salesdiscountto">To Date</string>
+
+
+    <string name="inventory_addpurchasepricing">Add Purchase Pricing</string>
+    <string name="inventory_purchasesuppliername">Supplier Name</string>
+    <string name="inventory_purchaseitemname">Item Name</string>
+    <string name="inventory_purchaseprice">Purchase Price</string>
+
+
+    <string name="inventory_editinventorylocation">Edit Inventory Location</string>
+    <string name="inventory_addinventorylocation">Add Inventory Location</string>
+    <string name="inventory_addinventorylocationtransfer">Add Inventory Location Trasfer</string>
+    <string name="inventory_locationname">Location Name</string>
+    <string name="inventory_locationnameprefix">Location Prefix</string>
+    <string name="inventory_locationstate">State</string>
+    <string name="inventory_locationcperson">Contact Person</string>
+    <string name="inventory_locationaddress">Address</string>
+    <string name="inventory_locationemail">Email</string>
+    <string name="inventory_locationcontactus">Contact No</string>
+    <string name="inventory_locationfaxno">Fax No</string>
+    <string name="inventory_locationgstin">GSTIN</string>
+    <string name="inventory_locationsupplier">Supplier</string>
+    <string name="inventory_locationcustomer">Customer</string>
+    <string name="fabcheckout">Checkout</string>
+    <string name="fabinvokesalesorder">Invoke Sales Order</string>
+    <string name="fabinvokedraft">Invoke Draft</string>
+    <string name="fabreturn">Return</string>
+    <string name="fabreceivepayment">Receive Payment</string>
+    <string name="fabsavesalesorder">Save Sales Order</string>
+    <string name="fabadvancepaymenlist">Advance Payment List</string>
+    <string name="fabsavedraft">Save Draft</string>
+    <string name="fabprintlist">Print List</string>
+    <string name="fabcleardraft">Clear Draft</string>
+    <string name="fabclearall">Clear All</string>
+    <string name="fabsupplierpayment">Supplier Payment</string>
+    <string name="fabinokepurchaseorder">Invoke Pruchase Order</string>
+    <string name="fabselecttable">Select Table</string>
+    <string name="fabsplitbill">Split Bill</string>
+    <string name="fabdailyreport">Daily Report</string>
+    <string name="fabprinterconfig">Printer Configuration</string>
+    <string name="fabsavepurchaseorder">Save Pruchase Order</string>
+
+
+    <string name="selfbilledinvoice">Self Billed Invoice</string>
+    <string name="supplierInvoiceValidation">Supplier Invoice No. is must</string>
+    <string name="selectCustomerError">Please select Customer First.</string>
+
+
+    <string name="formnumber">Form No</string>
+    <string name="customername">Customer Name</string>
+    <string name="suppliername">Supplier Name</string>
+    <string name="totalamount">Total Amount</string>
+    <string name="cartempty">Please add atleast one item to save order.</string>
+    <string name="supplierPaymentList">Supplier Payment List</string>
+    <string name="pleasewait">Please wait</string>
+    <string name="delwarningmsg">Do you want to Continue ?</string>
+    <string name="yesdel">Yes,delete it!</string>
+    <string name="delconfirm">Deleted!</string>
+    <string name="delfail">Oops not Deleted!</string>
+    <string name="bntok">OK</string>
+    <string name="cantdelete">It is already in use. Can\'t be deleted.</string>
+    <string name="title_addcontact">Add Contact</string>
+    <string name="title_editcontact">Edit Contact</string>
+    <string name="title_addcustomer">Add Customer</string>
+    <string name="title_addsupplier">Add Supplier</string>
+    <string name="accountCode">Code</string>
+    <string name="accountName">Name</string>
+    <string name="caccountType">Type</string>
+    <string name="pleaseTryAgain">Please try Again.</string>
+    <string name="err_msg_amt">Amount can\'t be empty.</string>
+    <string name="duplicatSalesOrder">Duplicate Sales Order</string>
+    <string name="duplicatSalesReturn">Duplicate Sales Return</string>
+    <string name="totalReturnAmt">Total Return Amount</string>
+    <string name="cashAmt">Cash Amount</string>
+    <string name="cardAmt">Card Amount</string>
+    <string name="totalVoucherAmt">Voucher Amount</string>
+    <string name="selectReason">Select Reason</string>
+    <string name="memo">Enter Memo</string>
+    <string name="gstInputTax">GST Input Tax</string>
+    <string name="gstPayableRecievable">Payable / Receivable</string>
+    <string name="gstOutputTax">GST Output Tax</string>
+    <string name="view">View</string>
+    <string name="activate">Activate</string>
+    <string name="deactiviate">DeActivate</string>
+    <string name="add">Add</string>
+    <string name="config_bankaccountnumber">Account Number</string>
+    <string name="config_bankname">Bank Name</string>
+    <string name="config_bankbranchname">Branch Name</string>
+    <string name="config_bankaddress">Address</string>
+    <string name="config_bankphoneno">Phone No</string>
+    <string name="config_bankemail">Email</string>
+    <string name="config_bankifsccode">IFSC Code</string>
+
+    <string name="config_emailserver">Email</string>
+    <string name="config_emailserverpassword">Password</string>
+    <string name="config_emailserverport">SMTP Port</string>
+    <string name="config_emailserverserver">SMTP Server</string>
+
+    <string name="config_agentname">Agent Name</string>
+    <string name="config_agentemail">Email</string>
+    <string name="config_agentnumber">Mobile</string>
+    <string name="config_agentaddress">Address</string>
+    <string name="config_agentcommission">Commission %</string>
+    <string name="config_agenteffectivedate">Effetive Date</string>
+    <string name="config_agentgstin">GSTIN</string>
+    <string name="config_agentecoomerce">E-commerce</string>
+    <string name="config_countryname">Country Name</string>
+
+    <array name="config_agent_ecoomerce">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+
+    <string name="config_currencycode">Currency Code</string>
+    <string name="config_currencyname">Currency Name</string>
+    <string name="config_currencydescirption">Currency Description</string>
+    <string name="config_currencysymbol">Currency symbol</string>
+
+    <string name="config_employeename">Employee Name</string>
+    <string name="config_employeecode">Employee Code</string>
+    <string name="config_employeeaddress">Employee Address</string>
+    <string name="config_employeephone">Employee Phone</string>
+    <string name="config_employeedob">DOB</string>
+    <string name="config_employeedoj">DOJ</string>
+    <string name="config_employeegender">Gender</string>
+    <string-array name="config_employee_gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="config_status">
+        <item>Active</item>
+        <item>InActive</item>
+    </string-array>
+
+    <string name="config_exratecurrency">Currency</string>
+    <string name="config_exrate">Exchange Rate</string>
+    <string name="config_exratedate">Effective Date</string>
+    <string name="config_exratecustomexchangerate">Customs Exchange Rate</string>
+
+    <string name="config_projecttitle">Title</string>
+    <string name="config_projectdescription">Description</string>
+    <string name="config_projectstatus">Status</string>
+    <array name="config_project_status">
+        <item>Active</item>
+        <item>InActive</item>
+    </array>
+
+    <string name="config_shippingdescription">Description</string>
+    <string name="config_shippingmethod">Shipping Method</string>
+
+    <string name="config_paymentmethod_name">Payment Name</string>
+    <string name="config_paymentmethod_description">Payment Description</string>
+    <string name="config_paymentmethod_type">Payment Type</string>
+    <string name="config_paymentmethod_acttype">Account Type</string>
+    <string name="config_paymentmethod_deftype">Default Type</string>
+
+    <array name="config_paymentmethod_type">
+        <item>Cash</item>
+        <item>Bank</item>
+        <item>Voucher</item>
+        <item>Card</item>
+    </array>
+
+
+    <string name="config_cofigurator_cashaccount">Cash Account</string>
+    <string name="config_cofigurator_bankaccount">Bank Account </string>
+    <string name="config_cofigurator_unitprice">UnitPrice</string>
+    <string name="config_cofigurator_disocunt">Discount</string>
+    <string name="config_cofigurator_printtype">Print Type</string>
+    <string name="config_cofigurator_module">Module</string>
+    <string name="config_cofigurator_printtypeA4">Normal (A4)</string>
+    <string name="config_cofigurator_printtype3In">POS (3inch)</string>
+    <string name="config_module_gold">Gold</string>
+    <string name="config_module_pharma">Pharma</string>
+    <string name="config_module_restaurant">Restuarant</string>
+    <string name="config_module_mobile">Mobile</string>
+    <array name="config_configuration">
+        <item>Editable</item>
+        <item>Non-editable</item>
+    </array>
+
+    <string name="config_versioncontrol_projectname">Project Name</string>
+    <string name="config_versioncontrol_projectdesc">Project Description </string>
+    <string name="config_versioncontrol_projectstatus">Status</string>
+
+    <array name="versioncontrol_user_status">
+        <item>Active</item>
+        <item>InActive</item>
+    </array>
+
+    <string name="config_servicecharge_name">Service Charge Name</string>
+    <string name="config_servicecharge_percentage">Service Percentage</string>
+    <string name="config_servicecharge_sergerydate">Surgery Date</string>
+
+    <string name="companysetup_company_name">Company Name</string>
+    <string name="companysetup_company_number">Company No.</string>
+    <string name="companysetup_company_panno">PAN No</string>
+    <string name="companysetup_company_incorpdate">Incorp. Date</string>
+    <string name="companysetup_company_address">Address</string>
+    <string name="companysetup_company_phonenumber">Phone Number</string>
+    <string name="companysetup_company_faxno">Fax No.</string>
+    <string name="companysetup_company_language">Language</string>
+    <string name="companysetup_company_email">Email</string>
+    <string name="companysetup_company_website">Website</string>
+    <string name="companysetup_company_country">Country</string>
+    <string name="companysetup_company_currency">Currency</string>
+    <string name="companysetup_company_state">State</string>
+    <string name="companysetup_company_isgstregsitered">GST Registered??</string>
+    <string name="companysetup_company_gstno">GST No.</string>
+    <string name="companysetup_company_gstregisdate">GST Registered Date</string>
+    <string name="companysetup_company_logo">Company Logo</string>
+
+    <string name="companysetup_fy_closingdate">Last Accounting Year Closing Date</string>
+    <string name="companysetup_fy_closingmethod">Closing Method</string>
+    <string name="companysetup_fy_startingperiod">Starting Period</string>
+    <string name="companysetup_fy_curntyrfrom">This Accounting Year\n From</string>
+    <string name="companysetup_fy_curntyrto">To</string>
+    <string name="companysetup_fy_closingperiod">Closing Period</string>
+    <string name="companysetup_fy_extension">Extension</string>
+    <string name="companysetup_fy_extensionperiod">Extension Period</string>
+    <string name="companysetup_fy_gstperiod">GST Taxable Period</string>
+    <array name="fy_gstperiod">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+    </array>
+
+    <string name="companysetup_hsncode">HSN/SAC Code</string>
+    <string name="companysetup_hsndescription">HSN/SAC Description</string>
+
+
+    <string name="companysetup_chartsclassi">Industry Classification</string>
+    <string name="companysetup_chartstypeofbuss">Types of Business</string>
+    <string name="companysetup_chartsbalancesheet">BALANCE SHEET</string>
+    <string name="companysetup_chartsprofitloss">PROFIT LOSS</string>
+
+
+    <string name="usersetup_username">User Name</string>
+    <string name="usersetup_password">Password </string>
+    <string name="usersetup_newpassword">New Password </string>
+    <string name="usersetup_fullname">Full Name</string>
+    <string name="usersetup_squestion">Security Question</string>
+    <string name="usersetup_answer">Answer</string>
+    <string name="usersetup_telephonenumber">Telephone Number</string>
+    <string name="usersetup_email">Email Address</string>
+    <string name="usersetup_location">Inventory Location</string>
+    <string name="usersetup_status">Status</string>
+    <array name="usersetup_status">
+        <item>Active</item>
+        <item>InActive</item>
+    </array>
+
+    <string name="userconfigurator_cashaccount">Cash Account</string>
+    <string name="userconfigurator_bankaccount">Bank Account</string>
+    <string name="userconfigurator_unitprice">Unit Price</string>
+    <string name="userconfigurator_discount">Discount</string>
+    <string name="userconfigurator_cess">Cess</string>
+    <string name="userconfigurator_uom">UOM</string>
+    <string name="userconfigurator_tax">Tax</string>
+    <string name="userconfigurator_date">Date</string>
+    <string name="userconfigurator_paymenttype">Payment Type</string>
+    <string name="userconfigurator_quantity">Quantity</string>
+    <string name="userconfigurator_description">Description</string>
+    <string name="userconfigurator_printtype">Print Type</string>
+    <string name="userconfigurator_normal">Normal (A4)</string>
+    <string name="userconfigurator_pos">POS (3 Inch)</string>
+
+    <string name="actmaintance_actgrp">Account Group</string>
+    <string name="actmaintance_level1">Level-1</string>
+    <string name="actmaintance_level2">Level-2</string>
+    <string name="actmaintance_actname">Account Name</string>
+    <string name="actmaintance_acttype">Account Type</string>
+    <string-array name="actmaintance_acttype">
+        <item>ALL</item>
+        <item>AP</item>
+        <item>AR</item>
+        <item>NOONE</item>
+    </string-array>
+
+
+    <string name="opnbalance_itemname">Item Name</string>
+    <string name="opnbalance_itemqty">Item Qty</string>
+    <string name="opnbalance_stockvalue">Stock Value</string>
+    <string name="opnbalance_calcprice">Calculated Price</string>
+    <string name="opnbalance_location">Location</string>
+
+    <string name="opnbalance_purchasesuppliername">Supplier Name</string>
+    <string name="opnbalance_salescustomername">Customer Name</string>
+    <string name="opnbalance_salesinvdate">Invoice Date</string>
+    <string name="opnbalance_salesinvno">Invoice No</string>
+    <string name="opnbalance_salesinvamt">Invoice Amount</string>
+    <string name="opnbalance_saletaxamt">Tax Amount</string>
+    <string name="opnbalance_salestotalrec">Total Receivable</string>
+    <string name="opnbalance_salesamtrectilldate">Amount Received Till Date</string>
+    <string name="opnbalance_salesbalamt">Balance Amount</string>
+    <string name="opnbalance_purchasetotalrec">Total Payable</string>
+    <string name="opnbalance_purchaseamtrectilldate">Amount Payable Till Date</string>
+    <string name="paymentList">Payment List</string>
+    <string name="duplicatPurchaseOrder">Duplicate Purchase Order</string>
+    <string name="duplicatPurchaseReturn">Duplicate Purchase Return</string>
+
+
+    <string-array name="salesReutrnReason">
+        <item>Sales Return</item>
+        <item>Post Sale Discount</item>
+        <item>Deficiency in service</item>
+        <item>Correction in Invoice</item>
+        <item>Change in POS</item>
+        <item>Finalization of Provisional Assessment</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <!--*********************************************************Pos Printer**********************************************************-->
+    <string name="pos_printer_config_title">Printer Configuration</string>
+    <string name="pos_3inch">3-inch</string>
+    <string name="pos_2inch">2-inch</string>
+    <string name="scanning">Searching...</string>
+    <string name="bluettoth_doesnt">Your device does not support bluetooth.</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="no_printer_connected">No printer is connected</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Search for devices</string>
+    <string name="connect_bluetooth_device_btn">Connect a Bluetooth Printer</string>
+    <string name="print_btn">Print Receipt</string>
+    <string name="option_btn">Print Option</string>
+    <string name="bt_inquiry_btn">Inquiry Status</string>
+    <string name="quit_btn">Quit</string>
+    <string name="title_connection">Please connect bluetooth printer.</string>
+    <string name="title_connecting">Connecting...</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="bt_not_enabled_leaving">Bluetooth is not enabled</string>
+    <string name="print_line">"----------------------------------------------"  </string>
+    <string name="print_line2inch">"--------------------------------"</string>
+    <string name="alert_title">Re-connect</string>
+    <string name="alert_title_connect">Bluetooth Print</string>
+    <string name="alert_message">Would you like to re-connect with a bluetooth printer?</string>
+    <string name="alert_message_connect">Would you like to give bluetooth print?</string>
+
+    <string name="alert_btn_positiveKotPrinter">Single Printer</string>
+    <string name="alert_btn_negativeKotPrinter">Multiple Printer</string>
+    <string name="alert_btn_positive">Yes</string>
+    <string name="alert_btn_negative">No</string>
+    <string name="contentdesctiption">content description</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <string name="read_file">This app needs access to your file storage so that it can read photos.</string>
+    <string name="permission_read_storage">Read Storage Permission need for this application.</string>
+    <string name="permission_write_storage">Write Storage Permission need for this application.</string>
+    <string name="permission_camera">Camera Permission need for this application.</string>
+    <string name="permission_access_coarse_location">Location Permission need for this application.</string>
+
+
+    <string name="selectIndustry">Select An Industry</string>
+    <string name="selectPractitioner">Select Practitioner</string>
+    <string name="selectSubscription">Select Subscrition</string>
+    <string name="optFor">Opted For*</string>
+    <string name="Hiconnect">Hi Connect</string>
+    <string name="HiSync">Hi Sync</string>
+    <string name="gstvode">Gst Code</string>
+    <string name="welcome">Welcome to Hi Accounts</string>
+    <string name="introcompany">A new generation accounting software to Accounting Professionals from accounting professionals.</string>
+    <string name="introcompany1">One-stop business management solution for the SMEs HI Accounts V15.1 provides one-stop business management function, including financial accounting purchase and sales and inventory management, so that you can easily manage your business and allocate more resources for exploring more business opportunities.</string>
+    <string name="introcompany2">Sales Management Module, Purchase Management Module, Inventory Management Module, Accounting Management Module, Banking Module and Reporting Management Module.</string>
+
+    <string name="regCompanyName">Company Name</string>
+    <string name="regCompanyRegisNo.">Company/UTN No.</string>
+    <string name="regCompanyRegisDate">Incorp. Date</string>
+    <string name="regIsGSTRegister">GST Registered ?</string>
+    <string name="regCompanyGstRegNo.">GST Registration No.</string>
+    <string name="regCompanyGstRegDate">GST Registration Date</string>
+    <string name="compnayAddress">Address</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="faxNumber">Fax Number</string>
+    <string name="language">Language</string>
+    <string name="email">Email</string>
+    <string name="state">State</string>
+    <string name="website">Website</string>
+    <string name="country">Country</string>
+    <string name="Currency">Currency</string>
+    <string name="companyLogo">Company Logo</string>
+
+
+    <string name="lastyearclosing">Last Accounting Year Closing Date*</string>
+    <string name="closingmethod">Closing Method</string>
+    <string name="statingperiod">Starting Period*</string>
+    <string name="closingperiod">Closing Period*</string>
+    <string name="thisyear">This Accounting Year</string>
+    <string name="extensionperiod">Extension Period</string>
+    <string name="extension">Extension</string>
+    <string name="gstperiod">GST Taxable Period</string>
+    <string name="selectindustryfromlist">Select from the list</string>
+    <string name="createlistlater">Create the list later</string>
+    <string name="industryClassification">Industry Claasification</string>
+    <string name="typeofBusiness">Type of Business</string>
+    <string name="accountmasterSheet">Account Master: Balance Sheet</string>
+    <string name="accountProfitandLoss">Account Master: Profit Loss</string>
+    <string name="back">Back</string>
+    <string name="next1">Next</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="module_menugtprinlist">Print List</string>
+    <string name="module_menugtclearall">Clear All</string>
+
+    <string name="module_menuselectinvoice">Select Invoice</string>
+    <string name="module_menurepair">Repair</string>
+    <string name="module_menudraftrepair">Draft Repair</string>
+    <string name="module_menureplace">Replace</string>
+    <string name="module_menudraftreplace">Draft Replace</string>
+
+    <string name="repairdeliveredlist">Delivered List</string>
+    <string name="repairsave">Save</string>
+    <string name="repairdraft">Draft</string>
+    <string name="repairinvoke">Invoke</string>
+    <string name="replacesave">Save</string>
+    <string name="replacing">Replacing</string>
+    <string name="draftreplace">Draft</string>
+    <string name="draftinvoke">Invoke</string>
+
+    <string name="serviceprintlistrepair">Repair List</string>
+    <string name="serviceprintlistreplace">Replace List</string>
+    <string name="serviceprintlistdeliver">Delivery List</string>
+
+    <string name="module_menupayment">Payment</string>
+    <string name="recievePayment">Recieve</string>
+    <string name="advacnePayment">Advance</string>
+    <string name="supplierPayment">Supplier</string>
+    <string-array name="module_sales_submenupayment">
+        <item>@string/recievePayment</item>
+        <item>@string/advacnePayment</item>
+    </string-array>
+
+
+    <string-array name="module_purchase_submenupayment">
+        <item>@string/supplierPayment</item>
+        <item>@string/advacnePayment</item>
+    </string-array>
+
+    <string name="module_menurecievitem">Recieve Item</string>
+    <string name="recieveSave">Save</string>
+    <string name="recieveInvoke">Invoke</string>
+    <string name="recieveReturn">Return</string>
+    <string-array name="module_purchase_submenurecieveitem">
+        <item>@string/recieveSave</item>
+        <item>@string/recieveInvoke</item>
+        <item>@string/recieveReturn</item>
+    </string-array>
+
+    <string name="module_menudeliveryorder">Delivery Order</string>
+    <string name="module_menuloandeliveryorder">Loan Delivery Order</string>
+    <string name="deliveryorderSave">Save</string>
+    <string name="deliveryorderInvoke">Invoke</string>
+    <string name="deliveryorderReturn">Return</string>
+    <string-array name="module_purchase_submenudeliveryorder">
+        <item>@string/deliveryorderSave</item>
+        <item>@string/deliveryorderInvoke</item>
+        <item>@string/deliveryorderReturn</item>
+    </string-array>
+
+    <string name="module_menudrafts">Drafts</string>
+    <string name="draftsSave">Save</string>
+    <string name="draftsInvoke">Invoke</string>
+    <string name="draftsClear">Clear</string>
+    <string-array name="module_purchase_submenudrafts">
+        <item>@string/draftsSave</item>
+        <item>@string/draftsInvoke</item>
+        <item>@string/draftsClear</item>
+    </string-array>
+    <string name="module_menudebitnote">Debit Note</string>
+    <string name="module_menureturnitem">Return Item</string>
+    <string name="module_menuexportinvoice">Export Invoice</string>
+    <string name="module_menudraftinvoice">Draft Invoice</string>
+
+
+    <string name="module_menupurchaseorder">Purchase Order</string>
+    <string name="module_menusalesorder">Sales Order</string>
+    <string name="orderSave">Save</string>
+    <string name="orderInvoke">Invoke</string>
+    <string-array name="module_submenuorder">
+        <item>@string/orderSave</item>
+        <item>@string/orderInvoke</item>
+    </string-array>
+
+    <string name="module_menuproforma">Pro Forma</string>
+    <string name="proformasave">Save</string>
+    <string name="proformainvoke">Invoke</string>
+    <string-array name="module_submenuproforma">
+        <item>@string/proformasave</item>
+        <item>@string/proformainvoke</item>
+    </string-array>
+
+    <string name="module_menuquotation">Quotation</string>
+    <string name="quotationsave">Save</string>
+    <string name="quotationinvoke">Invoke</string>
+    <string-array name="module_submenuquotation">
+        <item>@string/quotationsave</item>
+        <item>@string/quotationinvoke</item>
+    </string-array>
+
+    <string name="module_menuprintlist">Print List</string>
+    <string name="printlistcreditnote">Credit Note</string>
+    <string name="printlistinvoice">Invoice</string>
+    <string name="printlistpurchaseorder">Purchase Order</string>
+    <string name="printlistpurchasereturn">Purchase Return</string>
+    <string name="printlistpurchasequotation">Purchase Quotation</string>
+    <string name="printlistrecieveitem">Recieve Item</string>
+    <string name="printlistpaymentlisting">Payment Listing</string>
+    <string-array name="module_purchase_submenuprintlist">
+        <item>@string/printlistcreditnote</item>
+        <item>@string/printlistinvoice</item>
+        <item>@string/printlistpurchaseorder</item>
+        <item>@string/printlistpurchasereturn</item>
+        <item>@string/printlistpurchasequotation</item>
+        <item>@string/printlistrecieveitem</item>
+        <item>@string/printlistpaymentlisting</item>
+    </string-array>
+
+
+    <!--<string name="module_menusalesprintlist">Print List</string>-->
+    <string name="printlistdebitnote">Debit Note</string>
+    <string name="printlistsalesinvoices">Invoices</string>
+    <string name="printlistsalesorder">Sales Order</string>
+    <string name="printlistsalesreturn">Sales Return</string>
+    <string name="printlistsalesquotation">Sales Quotation</string>
+    <string name="printlistdeliveryorder">Delivery Order</string>
+    <string name="printlistloandeliveryorder">Loan Delivery Order</string>
+    <string name="printlistreceivedpaymentlisting">Received Payment Listing</string>
+    <string name="printlistadvancepaymentlisting">Advance Payment Listing</string>
+    <string name="printlistproforma">Pro Forma</string>
+    <string-array name="module_sales_submenuprintlist">
+        <item>@string/printlistdebitnote</item>
+        <item>@string/printlistsalesinvoices</item>
+        <item>@string/printlistsalesorder</item>
+        <item>@string/printlistsalesreturn</item>
+        <item>@string/printlistsalesquotation</item>
+        <item>@string/printlistdeliveryorder</item>
+        <item>@string/printlistloandeliveryorder</item>
+        <item>@string/printlistreceivedpaymentlisting</item>
+        <item>@string/printlistadvancepaymentlisting</item>
+        <item>@string/printlistproforma</item>
+    </string-array>
+
+    <string name="module_menucreditnote">Credit Note</string>
+    <string name="module_menupiretrurnitem">PIReturn Item</string>
+
+    <string name="menu_duplicatesalesquotation">Sales Quotation List</string>
+    <string name="menu_duplicatesalesorderlist">Sales Order List</string>
+    <string name="menu_duplicatedeliveryorderlist">Sales Delivery Order</string>
+    <string name="menu_duplicateloandeliveryorderlist">Loan Delivery Order</string>
+    <string name="menu_duplicatesalesproforma">Pro Forma List</string>
+    <string name="menu_duplicatesalesadvancedlist">Advance Payment List</string>
+    <string name="menu_duplicatesalesdebitnote">Debit Note List</string>
+    <string name="menu_salesreturnitem">POS Sales Invoice List</string>
+
+    <string name="menu_gtexpenselist">Expenses List</string>
+    <string name="menu_gtreceiptlist">Receipt List</string>
+    <string name="menu_deliverylist"> Delivery Invoice List</string>
+
+
+    <string name="printlistCreditNote">Credit Note</string>
+    <string name="printlistPaymentListing">Payment Listing</string>
+
+    <string name="printlistSalesQuotation">Sales Quotation</string>
+    <string name="printlistSalesOrder">Sales Order</string>
+    <string name="printlistDeliveryOrder">Delivery Order</string>
+    <string name="printlistLoanDeliveryOrder">Loan Delivery Order</string>
+    <string name="printlistReceivedPaymenList">Recieved Payment List</string>
+    <string name="printlistAdvancePaymentList">Advance Payment List</string>
+    <string name="printlistSalesReturn">Sales Return</string>
+    <string name="printlistDebitNote">Debit Note</string>
+    <string name="printlistProForma">Pro Forma</string>
+
+
+    <string name="AddCreditNote">Add Credit Note</string>
+    <string name="proformano">Pro Forma No</string>
+    <string name="AddDebitNote">Add Debit Note</string>
+    <string name="fabCreditNote">Credit Note</string>
+    <string name="fabsavequotation">Save Quotation</string>
+    <string name="fabinvokequotation">Invoke Quotation</string>
+    <string name="fabsaverecieveitem">Save Receive Item</string>
+    <string name="fabinvokerecieveitem">Invoke Receive Item</string>
+    <string name="fabreturnrecieveitem">Return Receive Item</string>
+
+    <string name="reveresecharageinvoice">Reverse Charge Invoice</string>
+    <string name="purchaseInvoiceList">Purchase Invoice List</string>
+    <string name="salesInvoiceList">Sales Invoice List</string>
+    <string name="purchaseInvokeOrderList">Invoke Purchase Order</string>
+    <string name="purchaseInvokeQuotationList">Invoke Purchase Quotation</string>
+    <string name="purchaseInvokeReceiveItemList">Invoke Receive Item</string>
+    <string name="purchaseReturnReceiveItemList">Type Receive Item No</string>
+
+
+    <string name="salesInvokeQuotationList">Invoke Sales Quotation</string>
+    <string name="salesInvokeDeliveryOrder">Invoke Delivery Order</string>
+    <string name="salesReturnDeliveryOrder">Sales Invoice List</string>
+
+
+    <string name="cancelwarningmsg">Do you want to Cancel Invoice ?</string>
+    <string name="yesCancel">Yes,Cancel it!</string>
+
+
+    <string name="subcription_validity">Validity</string>
+    <string name="subcription_nameofbusiness">Name of Business</string>
+    <string name="subcription_noofuser">No of Users</string>
+    <string name="subcription_practitonername">Practitioner Name</string>
+    <string name="subcription_hicoonect">Hi Connect</string>
+    <string name="subcription_hisync">Hi Sync </string>
+
+    <string-array name="closingMethod">
+        <item>Yearly Closing</item>
+    </string-array>
+    <string-array name="gstTaxablePeriod">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+    </string-array>
+
+    <string-array name="startingPeriod">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="closingPeriod">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="extensionPeriod">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <!--
+    <string name="comapnyChartsofAccount">Cash Account</string>
+    <string name="comapnyChartsofAccount">Bank Account </string>
+    <string name="comapnyChartsofAccount">Unit Price</string>
+    <string name="comapnyChartsofAccount">Discount</string>
+    <string name="comapnyChartsofAccount">Print Type</string>
+    <string name="comapnyChartsofAccount">Menu Type</string>-->
+
+    <string-array name="compnayMenuType">
+        <item>Gold</item>
+        <item>Resturant</item>
+        <item>Pharma</item>
+        <item>Mobile</item>
+    </string-array>
+
+
+    <string-array name="paymentType">
+        <item>--Select Payment Type--</item>
+        <item>Bank</item>
+        <item>Card</item>
+        <item>Voucher</item>
+    </string-array>
+
+    <string name="restra_itemwithimg">With Image</string>
+
+    <string name="invoicedate">Invoice Date</string>
+    <string name="CreditNote">Credit Note</string>
+    <string name="DebitNote">Debit Note</string>
+    <string name="createCreditNote">Create Credit Note</string>
+    <string name="createDebitNote">Create Debit Note</string>
+
+    <string name="duplicatPurchasequotation">Purchase Quotation</string>
+    <string name="duplicatrecieveitem">Recieve Item</string>
+
+    <string name="print_equal">"=============================================="  </string>
+    <string name="print_star">"**********************************************"  </string>
+
+    <string name="print_equal2inc">"================================"</string>
+    <string name="print_star2inch">"********************************"</string>
+
+    <string name="comapnyIntroduction">Introduction</string>
+    <string name="comapnyInformation">Company Information</string>
+    <string name="comapnyFinancialYear">Financial Year</string>
+    <string name="comapnyChartsofAccount">Chart of Accounts</string>
+    <string name="select_proformanumber">Select</string>
+    <string name="delconfirmDraft">Draft Canceled!</string>
+
+
+</resources>

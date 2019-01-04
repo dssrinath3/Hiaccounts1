@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <LinearLayout
+        android:layout_marginBottom="98dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/idFrom"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From:"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <EditText
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:id="@+id/fromDate"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/idTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To:"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <EditText
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:id="@+id/toDate"
+                    android:singleLine="true"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/idLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <Spinner
+                    android:id="@+id/location"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/idLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From:"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <Spinner
+                    android:id="@+id/fromInvoiceNo"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/idLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To:"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <Spinner
+                    android:id="@+id/toInvoiceNo"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/idLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employee:"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <EditText
+                    android:focusableInTouchMode="true"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edEmployeeName"
+                    android:singleLine="true"
+                    android:hint="select employee"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textNoSuggestions"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="Customer:"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+                <EditText
+                    android:focusableInTouchMode="true"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/customerName"
+                    android:singleLine="true"
+                    android:hint="Cash Customer | 01"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textNoSuggestions"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:id="@+id/searchView"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="View"
+                    android:textColor="@color/colorWhite"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ListView
+                android:id="@+id/dayEndListview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorGrey"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="Grand Total"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAppearance="?android:textAppearanceSmall"/>
+        <TextView
+            android:id="@+id/grandTotalAmount"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="0.00"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAppearance="?android:textAppearanceSmall"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llPaginationView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="5">
+
+
+        <TextView
+            android:id="@+id/tvFirst"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="First"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tvPrev"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Prev"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tvPageNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorBlack"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Next"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tvLast"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Last"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+
+    </LinearLayout>
+</RelativeLayout>

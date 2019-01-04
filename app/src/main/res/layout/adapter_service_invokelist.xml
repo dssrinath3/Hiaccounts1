@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:id="@+id/ll_listtitle"
+        android:layout_below="@+id/ed_searchitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tvFormno"
+            android:text=""
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvCustomername"
+            android:layout_gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/paddingmargin">
+
+            <ImageView
+                android:id="@+id/imgviewEdit"
+                android:layout_gravity="center"
+                android:padding="1dp"
+                android:layout_weight="1"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_edit"
+
+                />
+
+            <ImageView
+                android:id="@+id/imgviewCancel"
+                android:layout_gravity="center"
+                android:padding="1dp"
+                android:layout_weight="1"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_returned"
+                />
+
+            <ImageView
+                android:id="@+id/imgviewPrint"
+                android:layout_gravity="center"
+                android:padding="1dp"
+                android:layout_weight="1"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_print"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

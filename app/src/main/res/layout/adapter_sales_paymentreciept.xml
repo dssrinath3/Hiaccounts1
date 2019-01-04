@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:id="@+id/ll_listtitle"
+        android:layout_below="@+id/ed_searchitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCustomerName"
+            android:text=""
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvTotalAmount"
+            android:layout_gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvAmountPaid"
+            android:layout_gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvRemainingAmount"
+            android:layout_gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+            <ImageView
+                android:gravity="center"
+                android:id="@+id/imgviewReceiptPrint"
+                android:layout_gravity="center"
+                android:padding="@dimen/paddingmargin"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_print" />
+    </LinearLayout>
+
+</RelativeLayout>

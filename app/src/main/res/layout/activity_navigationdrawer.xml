@@ -1,0 +1,41 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/appbar_naviagationdrawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ExpandableListView
+        android:id="@+id/left_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorGrey"
+        android:divider="@color/list_divider"
+        android:dividerHeight="@dimen/expandableListview_dividerheight"
+        android:fitsSystemWindows="true"
+        android:groupIndicator="@null"
+        android:listSelector="@drawable/list_selector"
+
+        />
+
+    <ExpandableListView
+        android:id="@+id/right_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/colorGrey"
+        android:divider="@color/list_divider"
+        android:dividerHeight="@dimen/expandableListview_dividerheight"
+        android:fitsSystemWindows="true"
+        android:groupIndicator="@null"
+        android:listSelector="@drawable/list_selector"
+
+        />
+
+</android.support.v4.widget.DrawerLayout>

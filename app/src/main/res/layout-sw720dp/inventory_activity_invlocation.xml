@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+
+    <ScrollView
+        android:layout_above="@+id/ll1"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey">
+
+                <LinearLayout
+                    android:id="@+id/llCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationname"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationName"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llLocatioPrefixName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCategoryName"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textViewPre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationnameprefix"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationPrefix"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llCategoryDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llLocatioPrefixName"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationstate"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/soinnerState"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llContcatPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCategoryDescription"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationcperson"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationCPerson"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llContcatAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llContcatPerson"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationaddress"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llContcatAddress"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationemail"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llContactNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llEmail"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationcontactus"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationContactNo"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFaxNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llContactNo"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationfaxno"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:digits="1234567890"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationFaxNo"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llGSTIN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llFaxNo"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationgstin"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:id="@+id/edLocationGSTIN"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llSupplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llGSTIN"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationsupplier"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/edLocationSupplier"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSupplier"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/inventory_locationcustomer"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+
+                        android:id="@+id/edLocationCustomer"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCustomer"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/tvpadding"
+                        android:text="Status"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerStatus"
+                        style="@style/spinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/save"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/close"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+</RelativeLayout>

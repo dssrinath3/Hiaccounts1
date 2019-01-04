@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrey"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:text="Select Account"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorWhite" />
+
+
+            <ImageView
+                android:id="@+id/imgviewClose"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_close" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/rlHeaderView"
+            android:id="@+id/llSearch"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/components_margintop"
+            >
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height">
+
+                <EditText
+
+                    android:imeOptions="actionSearch"
+                    android:layout_toLeftOf="@+id/imgviewSearch"
+                    android:id="@+id/edSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:background="@color/colorWhite"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:hint="Search" />
+
+                <ImageView
+                    android:background="@color/colorWhite"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/imgviewSearch"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/component_height"
+                    android:src="@drawable/ic_search"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/llSearch"
+            android:layout_above="@+id/rlBottomView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        </ListView>
+
+
+        <RelativeLayout
+
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rlBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:layout_marginBottom="@dimen/components_margintop"
+                android:background="@color/colorPrimary"
+                android:text="Close"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_close"
+                android:textColor="@color/colorWhite"
+                android:textAppearance="?android:textAppearanceMedium"
+                />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+
+</FrameLayout>

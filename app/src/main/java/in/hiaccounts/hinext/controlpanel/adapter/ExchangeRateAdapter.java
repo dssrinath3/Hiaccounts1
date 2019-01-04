@@ -1,0 +1,275 @@
+package in.hiaccounts.hinext.controlpanel.adapter;
+
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
+
+import java.util.List;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
+import in.hiaccounts.R;
+import in.hiaccounts.hinext.controlpanel.model.configurator_bank.exchange_rate.ExchangeRateDatum;
+import in.hiaccounts.task.AsyncTaskCompleteListener;
+import in.hiaccounts.task.PostDataTask;
+import in.hiaccounts.utility.Constant;
+import in.hiaccounts.utility.ServiceHandler;
+import in.hiaccounts.utility.UtilView;
+
+
+/**
+ * Custom adapter with "View Holder Pattern".
+ *
+ * @author danielme.com
+ */
+public class ExchangeRateAdapter extends ArrayAdapter<Object> {
+    private LayoutInflater layoutInflater;
+    private Activity activity;
+    private ServiceHandler serviceHandler;
+    private boolean isInternetPresent = false;
+    private String serverUrl;
+
+    public ExchangeRateAdapter(Context context, List<Object> objects) {
+        super(context, 0, objects);
+        layoutInflater = LayoutInflater.from(context);
+        activity = (Activity) context;
+        serviceHandler = new ServiceHandler(activity);
+        serverUrl = UtilView.getUrl(activity);
+    }
+
+    @Override
+    public View getView(final int position, View convertView, final ViewGroup parent) {
+        // holder pattern
+        Holder holder = null;
+        if (convertView == null) {
+            holder = new Holder();
+
+            convertView = layoutInflater.inflate(R.layout.controlpanel_adapter_exchnagerate, null);
+
+
+            holder.setTvCurrency((TextView) convertView.findViewById(R.id.tvCurrency));
+            holder.setTvExchangeRate((TextView) convertView.findViewById(R.id.tvExchangeRate));
+            holder.setTvCustomeExchangeRate((TextView) convertView.findViewById(R.id.tvCustomeExchangeRate));
+            holder.setTvEdit((TextView) convertView.findViewById(R.id.tvEdit));
+            holder.setImageViewEdit((ImageView) convertView.findViewById(R.id.imgviewEdit));
+            holder.setImgviewDelete((ImageView) convertView.findViewById(R.id.imgviewDelete));
+
+            convertView.setTag(holder);
+        } else {
+            holder = (Holder) convertView.getTag();
+        }
+
+        holder.getTvCurrency().setVisibility(View.GONE);
+        holder.getTvExchangeRate().setVisibility(View.GONE);
+        holder.getTvCustomeExchangeRate().setVisibility(View.GONE);
+        holder.getTvEdit().setVisibility(View.GONE);
+        holder.getImageViewEdit().setVisibility(View.GONE);
+        holder.getImgviewDelete().setVisibility(View.GONE);
+
+
+        final Object obj = getItem(position);
+        if (obj instanceof ExchangeRateDatum) {
+            final ExchangeRateDatum exchangeRateData = (ExchangeRateDatum) obj;
+
+            if (exchangeRateData != null) {
+
+
+                if (exchangeRateData.getCurrencyDTOList() != null)
+                    for (int i =0;i<exchangeRateData.getCurrencyDTOList().size();i++){
+                        holder.getTvCurrency().setText(exchangeRateData.getCurrencyDTOList().get(i).getCurrencyName());
+                    }
+
+
+                if (exchangeRateData.getExchangeRateValue() != null)
+                    holder.getTvExchangeRate().setText(exchangeRateData.getExchangeRateValue());
+
+                if (exchangeRateData.getCustomsexchangeRateValue() != null)
+                    holder.getTvCustomeExchangeRate().setText(exchangeRateData.getCustomsexchangeRateValue());
+
+                holder.getTvCurrency().setVisibility(View.VISIBLE);
+                holder.getTvExchangeRate().setVisibility(View.VISIBLE);
+                holder.getTvCustomeExchangeRate().setVisibility(View.VISIBLE);
+                holder.getTvEdit().setVisibility(View.GONE);
+                holder.getImageViewEdit().setVisibility(View.VISIBLE);
+                holder.getImgviewDelete().setVisibility(View.VISIBLE);
+            }
+            holder.getImageViewEdit().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((ListView) parent).performItemClick(v, position, 0);
+
+                }
+            });
+
+            holder.getImgviewDelete().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    deleteExchangeRate(exchangeRateData, obj);
+
+                }
+            });
+
+        }
+        return convertView;
+    }
+
+
+    private void deleteExchangeRate(final ExchangeRateDatum exchangeRateData, final Object obj) {
+
+        isInternetPresent = serviceHandler.isConnectingToInternet();
+        if (serverUrl != null) {
+            if (isInternetPresent) {
+                SweetAlertDialog pDialog = new SweetAlertDialog(activity, SweetAlertDialog.WARNING_TYPE);
+                pDialog.setTitleText(activity.getString(R.string.delwarningmsg));
+                pDialog.setConfirmText(activity.getString(R.string.yesdel));
+                pDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(final SweetAlertDialog sDialog) {
+                        final SweetAlertDialog pDialog = new SweetAlertDialog(activity, SweetAlertDialog.PROGRESS_TYPE);
+                        pDialog.getProgressHelper().setBarColor(activity.getResources().getColor(R.color.colorPrimary));
+                        pDialog.setTitleText(activity.getString(R.string.pleasewait));
+                        pDialog.setCancelable(false);
+                        if (pDialog != null)
+                            pDialog.show();
+                        String url = serverUrl + "/hipos//" + exchangeRateData.getExchangeRateId() + "/" + Constant.FUNTION_DELETEEXCHANGERATE;
+                        PostDataTask postDataTask = new PostDataTask(activity, new AsyncTaskCompleteListener<String>() {
+                            @Override
+                            public void onTaskComplete(String result) {
+                                if (pDialog != null)
+                                    pDialog.dismiss();
+
+                                if (result != null) {
+
+                                    if (result.toString().equals(activity.getString(R.string.error_rsonsecode204))) {
+                                        if (sDialog != null)
+                                            sDialog.dismissWithAnimation();
+                                        UtilView.showToast(activity, activity.getResources().getString(R.string.cantdelete));
+
+                                    }
+                                    if (result.toString() != null && !result.toString().equals(activity.getString(R.string.error_rsonsecode204))) {
+                                        Gson gson = new Gson();
+                                        try {
+
+                                            ExchangeRateDatum data = gson.fromJson(result.toString(), ExchangeRateDatum.class);
+                                            if (data != null) {
+                                                if (sDialog != null) {
+                                                    sDialog.setTitleText(activity.getString(R.string.delconfirm))
+                                                            /*.setContentText("Category "+category.getItemCategoryName())*/
+                                                            .setConfirmText(activity.getString(R.string.bntok))
+                                                            .setConfirmClickListener(null)
+                                                            .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                                                    remove(obj);
+                                                    notifyDataSetChanged();
+                                                }
+
+                                            } else {
+                                                if (sDialog != null) {
+                                                    sDialog
+                                                            .setTitleText(activity.getString(R.string.delfail))
+                                                            /*.setContentText("Category "+category.getItemCategoryName())*/
+                                                            .setConfirmText(activity.getString(R.string.bntok))
+                                                            .setConfirmClickListener(null)
+                                                            .changeAlertType(SweetAlertDialog.ERROR_TYPE);
+                                                }
+                                            }
+                                        } catch (Exception e) {
+                                            if (sDialog != null) {
+                                                sDialog
+                                                        .setTitleText(activity.getString(R.string.delfail))
+                                                            /*.setContentText("Category "+category.getItemCategoryName())*/
+                                                        .setConfirmText(activity.getString(R.string.bntok))
+                                                        .setConfirmClickListener(null)
+                                                        .changeAlertType(SweetAlertDialog.ERROR_TYPE);
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }, false);
+                        postDataTask.execute(new Gson().toJson(exchangeRateData).toString(), url, "");
+
+
+                    }
+                });
+                pDialog.show();
+            } else {
+                UtilView.showErrorDialog(activity.getResources().getString(R.string.intertnet_status), activity);
+            }
+        } else {
+            UtilView.gotToLogin(activity);
+        }
+
+
+    }
+
+
+    public class Holder {
+
+
+        TextView tvCurrency;
+        TextView tvExchangeRate;
+        TextView tvCustomeExchangeRate;
+        TextView tvEdit;
+
+        ImageView imageViewEdit;
+        ImageView imgviewDelete;
+
+        public TextView getTvCurrency() {
+            return tvCurrency;
+        }
+
+        public void setTvCurrency(TextView tvCurrency) {
+            this.tvCurrency = tvCurrency;
+        }
+
+        public TextView getTvExchangeRate() {
+            return tvExchangeRate;
+        }
+
+        public void setTvExchangeRate(TextView tvExchangeRate) {
+            this.tvExchangeRate = tvExchangeRate;
+        }
+
+        public TextView getTvCustomeExchangeRate() {
+            return tvCustomeExchangeRate;
+        }
+
+        public void setTvCustomeExchangeRate(TextView tvCustomeExchangeRate) {
+            this.tvCustomeExchangeRate = tvCustomeExchangeRate;
+        }
+
+        public TextView getTvEdit() {
+            return tvEdit;
+        }
+
+        public void setTvEdit(TextView tvEdit) {
+            this.tvEdit = tvEdit;
+        }
+
+        public ImageView getImageViewEdit() {
+            return imageViewEdit;
+        }
+
+        public void setImageViewEdit(ImageView imageViewEdit) {
+            this.imageViewEdit = imageViewEdit;
+        }
+
+        public ImageView getImgviewDelete() {
+            return imgviewDelete;
+        }
+
+        public void setImgviewDelete(ImageView imgviewDelete) {
+            this.imgviewDelete = imgviewDelete;
+        }
+    }
+}

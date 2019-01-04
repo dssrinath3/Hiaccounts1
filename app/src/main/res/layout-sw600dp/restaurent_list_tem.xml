@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.hiaccounts.utility.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/chkbxSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <EditText
+            android:id="@+id/edItemName"
+            android:background="@color/colorGrey"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <EditText
+            android:layout_marginLeft="5dp"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edItemPrice"
+            android:background="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <EditText
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorWhite"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edItemQty"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+        <EditText
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorGrey"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edGstTax"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+
+        <!--<EditText
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorGrey"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edAmountExTax"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />-->
+
+        <EditText
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorGrey"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edAmountInTax"
+            android:inputType="number"
+            android:digits="1234567890."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+
+    </LinearLayout>
+
+
+
+    <CheckBox
+
+        android:id="@+id/chkbxSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="2dp"
+        android:visibility="invisible" />
+</in.hiaccounts.utility.CheckableRelativeLayout>

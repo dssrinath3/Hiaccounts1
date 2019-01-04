@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+        <EditText
+            android:layout_marginLeft="2dp"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:background="@color/colorWhite"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edDebit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+        <EditText
+            android:layout_marginLeft="2dp"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:background="@color/colorWhite"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/edCredit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/component_height"
+            android:paddingLeft="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+    </LinearLayout>
+</LinearLayout>

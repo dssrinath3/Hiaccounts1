@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tvTaxName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_gravity="center_vertical"
+            android:text="Tax Name"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tvTaxDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:layout_gravity="center_vertical"
+            android:text="Description"
+
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+
+            android:id="@+id/tvTaxStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:text="Status"
+
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+
+            android:textColor="@color/colorBlack"
+            android:text="Action"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvAction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:visibility="visible"
+            android:textStyle="bold"/>
+
+        <!--
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="Edit"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tvEdit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:id="@+id/tvDelete"
+                            android:text="Delete"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </RelativeLayout>-->
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/app_bar_layout"
+        android:layout_above="@+id/rl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/colorGrey"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/progress_bar"
+                android:layout_toEndOf="@+id/progress_bar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/config_cofigurator_cashaccount"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/edCashAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:drawableRight="@drawable/ic_down"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:id="@+id/ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCategoryName"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/config_cofigurator_bankaccount"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+
+                        android:id="@+id/edBankAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:drawableRight="@drawable/ic_down"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/ed_paddingleft"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll2"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/config_cofigurator_unitprice"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spinnerUnitPrice"
+                        style="@style/spinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/config_cofigurator_disocunt"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDiscount"
+                        style="@style/spinner_style"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/ed_paddingleft" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll2"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="@string/config_cofigurator_printtype"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:checked="true"
+                                android:id="@+id/radioBtnNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/config_cofigurator_printtypeA4" />
+
+
+                            <RadioButton
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:id="@+id/radioBtnPos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/config_cofigurator_printtype3In" />
+
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="Menu Type"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/menuRecycleView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_toLeftOf="@+id/btnSave"
+            android:id="@+id/btnAddBank"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="Add Bank Account"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/save"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

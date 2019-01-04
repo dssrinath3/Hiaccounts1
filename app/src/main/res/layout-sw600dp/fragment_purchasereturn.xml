@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <com.rey.material.widget.ProgressView
+
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/progreeview_width"
+            android:layout_height="@dimen/progreeview_height"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:pv_autostart="true"
+            app:pv_circular="true"
+            app:pv_progressMode="indeterminate"
+            app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+        <LinearLayout
+            android:id="@+id/llSupplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_searchitem"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvSelectSupplier"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_down"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/tvpadding"
+                android:text="Select Supplier" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_searchitem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/component_height"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edPurchaseInvoiceNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:hint="@string/purchaseInvoiceNumber"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btn_searchinvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layoutmargin"
+                android:layout_weight="1"
+                android:background="@color/colorButton"
+                android:text="@string/search_invoice"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_invoiceitemlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/ll_searchitem"
+            android:layout_alignLeft="@+id/ll_searchitem"
+            android:layout_alignRight="@+id/ll_searchitem"
+            android:layout_alignStart="@+id/ll_searchitem"
+            android:layout_below="@+id/llSupplier"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:divider="@color/colorWhite"
+            android:dividerHeight="3dp"
+            android:scrollIndicators="none"></ListView>
+    </RelativeLayout>
+</RelativeLayout>

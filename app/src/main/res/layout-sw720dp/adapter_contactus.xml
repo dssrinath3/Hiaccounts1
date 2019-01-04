@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+
+        android:padding="@dimen/tvpadding"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCompanyCountry"
+        android:textAppearance="?android:textAppearanceMedium"
+
+        />
+
+    <TextView
+        android:gravity="center"
+        android:padding="@dimen/tvpadding"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCompanyname"
+        android:textAppearance="?android:textAppearanceMedium"
+        />
+
+    <TextView
+        android:gravity="center"
+        android:padding="@dimen/tvpadding"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCompnayAddress"
+
+        />
+
+    <TextView
+        android:gravity="center"
+        android:padding="@dimen/tvpadding"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCompanyNumber" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/paddingmargin"></View>
+
+</LinearLayout>

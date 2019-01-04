@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorGrey"
+    >
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+
+        android:background="@color/colorGrey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HeaderAboutHiAcocunt"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:text="@string/AboutHiAcocunt"
+            android:paddingTop="3dp"
+            android:id="@+id/tvAbouthiaacounts"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HeaderCompany"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:text="@string/AboutCompany"
+            android:paddingTop="3dp"
+            android:id="@+id/tvAboutcompany"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HeaderVision"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:text="@string/AboutVision"
+            android:paddingTop="3dp"
+            android:id="@+id/tvAboutvision"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HeaderOutTeam"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+            android:text="@string/AboutVision"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:id="@+id/tvAboutourteam"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"></View>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ScrollView>

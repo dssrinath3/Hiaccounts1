@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.hiaccounts.utility.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_itemname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/tvpadding"
+                android:text="item name"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorBlack" />
+
+            <CheckBox
+                android:id="@+id/chbx_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chbx_selection"
+            android:layout_marginTop="@dimen/tvpadding"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tvpadding"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Unit Price"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ed_itmunitprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:digits="0123456789."
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tvpadding"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Quantity"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+
+                    android:id="@+id/ed_itmquantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:digits="0123456789"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/tvpadding"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tvpadding"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Amount(Ex)"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ed_itmamount_exclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:text="0.00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:layout_marginTop="@dimen/tvpadding"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Tax"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_itmetaxlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/tvpadding" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_serialitems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Serial Items"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_serializeitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_margin="@dimen/tvpadding" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2"
+            android:layout_marginTop="@dimen/tvpadding"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tvpadding"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Tax Amount"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ed_itmtax"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tvpadding"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Discount"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+
+
+                    android:id="@+id/ed_itmdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:background="@color/colorGrey"
+                    android:digits="1234567890."
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tvpadding"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/tvpadding"
+                    android:text="Amount (In)"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ed_itm_amount_include"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</in.hiaccounts.utility.CheckableRelativeLayout>

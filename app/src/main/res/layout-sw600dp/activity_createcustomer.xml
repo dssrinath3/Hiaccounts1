@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <RelativeLayout
+
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:id="@+id/ll_addcustomer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGrey"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/component_height"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/paddingmargin"
+                        android:text="HiConnect : " />
+
+                    <Switch
+                        android:id="@+id/switchHiconnect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginLeft="@dimen/layoutmargin" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ed_customername"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/customer_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:visibility="visible" />
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/atcvCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/customer_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:visibility="gone" />
+
+
+                <EditText
+                    android:id="@+id/ed_customeremail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/customer_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ed_customercontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/customer_contact"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/ed_customeraddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/customer_address"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:layout_alignBaseline="@+id/btn_close"
+                android:layout_alignBottom="@+id/btn_close"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/btn_close"
+                android:layout_toStartOf="@+id/btn_close"
+                android:background="@color/colorButton"
+                android:text="@string/save"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cutomerlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/imgview_addcustomer"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/imgview_addcustomer"
+                    android:layout_toStartOf="@+id/imgview_addcustomer"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite">
+
+                    <EditText
+                        android:id="@+id/ed_searchcustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/imgview_searchcustomer"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/imgview_searchcustomer"
+                        android:layout_toStartOf="@+id/imgview_searchcustomer"
+                        android:background="@null"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="@dimen/paddingmargin"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <ImageView
+                        android:id="@+id/imgview_searchcustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/paddingmargin"
+                        android:padding="@dimen/paddingmargin"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_search" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_customer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:divider="@null"
+                android:dividerHeight="0dp"></ListView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

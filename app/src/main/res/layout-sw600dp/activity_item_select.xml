@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGrey"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_searchitem"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+       <LinearLayout
+           android:weightSum="3"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <TextView
+               android:textStyle="bold"
+               android:textColor="@color/colorBlack"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:id="@+id/tv_itmecode"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:padding="@dimen/tvpadding"
+               android:text="Item Code"
+               android:textAppearance="?android:textAppearanceMedium" />
+
+           <TextView
+
+               android:textColor="@color/colorBlack"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:id="@+id/tv_itemname"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:padding="@dimen/tvpadding"
+               android:text="Name"
+               android:textAppearance="?android:textAppearanceMedium" />
+
+           <TextView
+
+               android:textColor="@color/colorBlack"
+               android:textStyle="bold"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:id="@+id/tv_itemdescription"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:padding="@dimen/tvpadding"
+               android:text="Stock"
+               android:textAppearance="?android:textAppearanceMedium" />
+
+
+
+       </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:divider="@color/colorGrey"
+            android:dividerHeight="2dp"
+            android:drawSelectorOnTop="false"
+            android:scrollIndicators="none">
+
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/ll_searchitem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/component_height"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ed_searchitem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/ll"
+                android:background="@color/colorWhite"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/imgview_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:src="@drawable/ic_search" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_scanitembarcode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/scan_barcode"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite"
+
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

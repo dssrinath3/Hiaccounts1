@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorButton"
+    android:orientation="vertical">
+
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_height"
+        android:layout_height="@dimen/progreeview_width"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/CircularProgress"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rl_height"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/rl_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@color/colorLoginbg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:layout_width="@dimen/logo_width"
+                android:layout_height="@dimen/logo_height"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_logo" />
+
+            <EditText
+                android:id="@+id/edBaseUrl"
+                android:layout_width="@dimen/ed_width"
+                android:layout_height="@dimen/component_height"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorWhite"
+                android:hint="@string/base_url"
+                android:inputType="textWebEditText"
+
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:layout_width="@dimen/ed_width"
+                android:layout_height="@dimen/component_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/component_margin"
+
+                android:id="@+id/edPortNumber"
+                android:background="@color/colorWhite"
+                android:hint="@string/port_number"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:layout_width="@dimen/ed_width"
+                android:layout_height="@dimen/component_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/component_margin"
+
+                android:id="@+id/edApplicationname"
+                android:background="@color/colorWhite"
+                android:hint="@string/application_name"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+
+            <LinearLayout
+                android:layout_width="@dimen/ed_width"
+                android:layout_height="@dimen/component_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/component_margin"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorButton"
+                    android:text="@string/next"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorWhite" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvRegisternow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/component_margin"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

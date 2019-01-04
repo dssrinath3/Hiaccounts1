@@ -1,0 +1,4 @@
+
+include ':app', ':realm-browser'
+include ':app',':library'
+

@@ -1,0 +1,1803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbDashBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard "
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llDashBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbDashBoardDateTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Date and Time"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbDashBoardCashInHand"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Cash In Hand"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbDashBoardCashInBank"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Cash In Bank"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbDashBoardTotalRecievable"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Total Receivable"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbDashBoardTotalPayable"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Total Payable"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:visibility="invisible" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbSales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sales"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+                <LinearLayout
+                    android:id="@+id/llSales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbSalesItems"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Add Item"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesCustomer"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Add Customer"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesSaveDraft"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Save Draft"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbSalesClearDraft"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Clear Draft"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesPrintList"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Print List"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesAdvacnePayment"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Advance Payment"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbSalesSaveSalesOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Save Sales Order"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesAdvancePrintList"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Advance Payment List"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesInvokeSalesOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Invoke Sales Order"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbSalesClearAll"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Clear All"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesCheckout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Check Out"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesReturn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Sales Return"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbSalesRecievePayment"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Recieve Payment"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbSalesInvokeDraft"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Invoke Draft"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:visibility="invisible" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbPurchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llPurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseItems"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Add Item"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseSupplier"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Add Supplier"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchasePrintList"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Print List"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseAdvancePayment"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Advance Payment"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseSavePurchaseOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Save Purchase Order"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPruchaseAdvPaymentList"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Advance Payment List"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseInvokePo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Invoke Purchase Order"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseClearAll"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Clear All"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseCheckOut"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Check Out"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/cbPurchasaeReturn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Purchase Return"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseSupplierPayment"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Supplier Payment"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <CheckBox
+                            android:id="@+id/cbPurchaseSelfBilled"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Self Billed"
+                            android:textAppearance="?android:textAppearanceSmall" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbGeneralTransaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="General Transaction"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llGeneralTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbGTExpense"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Expense"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbGTReciepts"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Reciepts"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbGTJournalEntry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Journal Entry"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbInventory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inventory"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llInventory1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Category"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryBrand"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Brand"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryUOM"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="UOM"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInventory2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryItem"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Item"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbInventorySalesPricing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Sales Pricing"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryPurchasePricing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Purchase Pricing"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInventory3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Inventory Location"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbInventoryMovementType"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Inventory MovementType"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Inventory MovementType"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tax"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llTax1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbTaxConfig"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Tax Configuration"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbTaxGST"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="GST"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbCPanel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Control Panel"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellOBofBS"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lOBofBS"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellOBofPI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lOBofPI"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellOBofSI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lOBofSI"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellOBofINV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lOBofINV"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelLastYrFig"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Last Year Figure"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelMonthEnd"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Month End"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelYearEnd"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Year End"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigurator"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigBank"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Bank"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigAgent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Agent"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigEmployee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Employee"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigCurrency"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Currency"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigExRate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Exchange Rate"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigProject"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Project Title"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelShipping"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Shipping Method"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Email Server"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigPayment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Payment Method"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelConfigConfig"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Configurator Configuration"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelCompnaySetup"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Company Setup"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelCompnaySetupCI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Company SetupCI"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelCompnaySetupFY"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Company SetupFY"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelCompnaySetupCA"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Company SetupCA"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelCompnaySetupHsn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Company SetupHSN"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelUAS"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="User Account Setup"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelUASuas"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="UASuas"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelUASat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="UASat"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelActMaintenance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Account Maintenance"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellAMag"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lAMag"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellAMcoa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lAMcoa"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellAMbudget"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lAMbudget"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelDisplaySetup"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lDisplaySetup"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanellDSfs"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lDSfs"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbCPanelDSlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lDSlayout"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControlPanel12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cblDStermsCond"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="lDStermsCond"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="UASat"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="invisible" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Account Maintenance"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llContact1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbContactSuppllier"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Supplier"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbContactCustomer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Customer"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbContactContacts"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Contacts"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/cbReports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reports"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/llReport1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsPurchase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Purchase"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsPurchaseSSR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="PurchaseSSR"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsPurchasePOL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="PurchasePOL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llreport2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsContacts"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Contacts"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsPurchasePRL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="PurchasePRL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsPurchaseSP"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="PurchaseSP"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsPurchasePA"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="PurchasePA"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSale"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Report Sale"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleSOL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleSOL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleICL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleICL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleSIL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleSIL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleSRL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleSRL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSalePR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SalePR"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSalePL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SalePL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleCA"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleCA"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleCP"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleCP"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsSaleSA"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SaleSA"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsInventory"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Report Inventory"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llReport7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsInventryIVR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Inventory IVR"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsInventryISR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Inventory ISR"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsInventryISCR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Inventory ISCR"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsAnalysis"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Report Analysis"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsVendor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Analysis Top Vendor"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsItem"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Analysis Top Item"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsCustomer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Analysis Top Customer"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/ccbReportsStatment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial Statement"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsStatementPL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial StatementPL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsStatementBS"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial StatementBS"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsStatementTB"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial StatementTB"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsStatementGL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial StatementGL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsStatementVL"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial StatementVL"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsStatementGJ"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Financial StatementGJ"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:id="@+id/cbReportsBankRecon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Bank Recon"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReport12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/cbReportsBankReconRatio"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Bank Recon Ratio"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"></View>
+
+
+                  <LinearLayout
+                      android:visibility="visible"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <CheckBox
+                          android:id="@+id/cbHelp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Help"
+                          android:textAppearance="?android:textAppearanceMedium"/>
+
+                      <LinearLayout
+                          android:id="@+id/llHelp1"
+                          android:layout_marginTop="@dimen/components_margintop"
+                          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                          android:layout_marginRight="@dimen/activity_horizontal_margin"
+                          android:layout_weight="3"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <CheckBox
+                              android:id="@+id/cbHelpItem"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Add Item"
+                              android:textAppearance="?android:textAppearanceSmall"
+                              />
+                          <CheckBox
+                              android:id="@+id/cbHelpCustomer"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Add Customer"
+                              android:textAppearance="?android:textAppearanceSmall"/>
+                          <CheckBox
+                              android:id="@+id/cbHelpSalesOrder"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Save Sales Order"
+                              android:textAppearance="?android:textAppearanceSmall"/>
+
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:id="@+id/llHelp2"
+                          android:layout_marginTop="@dimen/components_margintop"
+                          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                          android:layout_marginRight="@dimen/activity_horizontal_margin"
+                          android:layout_weight="3"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <CheckBox
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:id="@+id/cbHelpAdvPaymnet"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Advance Payment List" />
+                          <CheckBox
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:id="@+id/cbHelpInvokeDraft"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Invoke Draft" />
+                          <CheckBox
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:id="@+id/cbHelpRecievePayment"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Receive Payment" />
+
+
+
+                      </LinearLayout>
+                      <!--<LinearLayout
+                          android:id="@+id/llInventory3"
+                          android:layout_marginTop="@dimen/components_margintop"
+                          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                          android:layout_marginRight="@dimen/activity_horizontal_margin"
+                          android:layout_weight="3"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+
+                          <CheckBox
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:id="@+id/cbInventoryLocation"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Inventory Location" />
+                          <CheckBox
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:id="@+id/cbInvMovementType"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Inventory MovementType" />
+
+                          <CheckBox
+                              android:visibility="invisible"
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent"
+                              android:text="Inventory MovementType" />
+
+
+
+                      </LinearLayout>-->
+
+
+
+                  </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/save"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@color/colorButton"
+            android:padding="@dimen/tvpadding"
+            android:text="@string/close"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+</RelativeLayout>

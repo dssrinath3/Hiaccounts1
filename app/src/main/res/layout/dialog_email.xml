@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrey">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrey">
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:id="@+id/tv_dialogtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/imageview_close"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:text="Mail"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/imageview_close"
+                android:layout_width="@dimen/imageview_iconwidth"
+                android:layout_height="@dimen/imageview_iconwidth"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+                android:src="@drawable/ic_close"
+
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header"
+        android:layout_above="@+id/view"
+        android:orientation="vertical">
+
+
+        <TextView
+
+            android:layout_marginTop="@dimen/components_margintop"
+            android:id="@+id/tv"
+            android:layout_below="@+id/rl_header"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:text="Email"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_marginTop="@dimen/components_margintop"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/ed_paddingleft"
+            android:id="@+id/edMail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorWhite"
+            android:textAppearance="?android:textAppearanceSmall"
+
+
+            />
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll1"
+        android:layout_marginTop="@dimen/layoutmargin"
+        android:layout_marginBottom="@dimen/layoutmargin"
+        android:background="@color/colorPrimary" />
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/component_height"
+        android:background="@color/colorButton"
+        android:text="@string/close"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/colorWhite" />
+    <Button
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/layoutmargin"
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/component_height"
+        android:layout_toLeftOf="@+id/btn_close"
+        android:background="@color/colorButton"
+        android:text="@string/save"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+</RelativeLayout>

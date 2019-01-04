@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_weight="1.25"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorBlack"
+                android:padding="@dimen/tvpadding"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fromdate" />
+            <TextView
+                android:layout_marginTop="@dimen/components_margintop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/tvpadding"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:id="@+id/tvFormDate" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/layoutmargin"
+            android:layout_weight="1.25"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorBlack"
+                android:padding="@dimen/tvpadding"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/todate" />
+            <TextView
+                android:layout_marginTop="@dimen/components_margintop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/tvpadding"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:id="@+id/tvToDate" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llViewReport"
+            android:layout_marginLeft="@dimen/layoutmargin"
+            android:layout_weight="0.50"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:scaleType="center"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_email" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvPaymentReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+    </LinearLayout>
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+
+
+
+</FrameLayout>

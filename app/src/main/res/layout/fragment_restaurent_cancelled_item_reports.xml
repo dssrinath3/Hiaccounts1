@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/idFrom"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From:"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <EditText
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:id="@+id/fromDate"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/idTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To:"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <EditText
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:id="@+id/toDate"
+                    android:singleLine="true"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/idLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <Spinner
+                    android:id="@+id/spinLocation"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/idLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Token"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/primaryText"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <Spinner
+                    android:id="@+id/spinTokenNo"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/idLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/searchView"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="View"
+                    android:textColor="@color/colorWhite"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/invoiceListview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

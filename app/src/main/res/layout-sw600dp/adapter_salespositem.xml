@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.hiaccounts.utility.CheckableRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/chkbxSelection"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+
+        <TextView
+            android:id="@+id/tvItmename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+
+            android:id="@+id/tvItemQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:visibility="visible" />
+
+        <TextView
+
+            android:id="@+id/tvItemUnitprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <TextView
+
+            android:id="@+id/tvItmeTotalAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+
+            android:textAppearance="?android:textAppearanceMedium" />
+
+
+        <!--    <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvItmeEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imageViewEdit"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_magnify_grey600_18dp" />
+
+
+            </RelativeLayout>-->
+
+    </LinearLayout>
+
+
+    <CheckBox
+
+        android:id="@+id/chkbxSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="2dp"
+        android:visibility="invisible" />
+</in.hiaccounts.utility.CheckableRelativeLayout>

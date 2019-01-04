@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+
+
+    <com.rey.material.widget.ProgressView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_marginBottom="@dimen/components_margintop"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        android:layout_above="@+id/linearLayout"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/components_margintop"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout"
+        android:layout_width="@dimen/ed_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edOtpNumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/component_height"
+            android:background="@color/colorWhite"
+            android:hint="@string/otp"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/ed_paddingleft"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <Button
+            android:layout_marginTop="@dimen/components_margintop"
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/component_height"
+            android:layout_below="@+id/linearLayout"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorButton"
+            android:text="@string/submit"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_logo" />
+
+
+</RelativeLayout>

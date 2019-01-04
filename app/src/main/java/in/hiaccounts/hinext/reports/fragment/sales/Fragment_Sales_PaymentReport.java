@@ -1,0 +1,589 @@
+package in.hiaccounts.hinext.reports.fragment.sales;
+
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.rey.material.widget.ProgressView;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+import in.hiaccounts.R;
+import in.hiaccounts.hinext.customer.activity.Activity_Customer;
+import in.hiaccounts.hinext.customer.model.Customer;
+import in.hiaccounts.hinext.reports.adapter.salesreport.SalesPaymentReportAdapter;
+import in.hiaccounts.hinext.reports.model.CustomerList;
+import in.hiaccounts.hinext.reports.model.SalesList;
+import in.hiaccounts.hinext.reports.model.SalesReportData;
+import in.hiaccounts.hinext.reports.model.SalesReportList;
+import in.hiaccounts.hinext.reports.model.SalesReportQuotationList;
+import in.hiaccounts.hinext.reports.model.restuarant.CompanyDetails;
+import in.hiaccounts.task.AsyncTaskCompleteListener;
+import in.hiaccounts.task.GetDataTask;
+import in.hiaccounts.utility.Constant;
+import in.hiaccounts.utility.ServiceHandler;
+import in.hiaccounts.utility.SharedPreference;
+import in.hiaccounts.utility.UtilView;
+
+import static in.hiaccounts.R.string.response_error;
+
+/**
+ * Created by srinath on 28/11/2017.
+ */
+
+public class Fragment_Sales_PaymentReport extends Fragment {
+
+
+    public static String TAG = Fragment_Sales_PaymentReport.class.getSimpleName();
+    @BindView(R.id.progress_bar)
+    ProgressView progressBar;
+    @BindView(R.id.idFrom)
+    TextView idFrom;
+    @BindView(R.id.fromDate)
+    EditText edFromDate;
+    @BindView(R.id.idTo)
+    TextView idTo;
+    @BindView(R.id.toDate)
+    EditText edToDate;
+    @BindView(R.id.fromInvoiceNo)
+    Spinner spinFromInvoiceNo;
+    @BindView(R.id.toInvoiceNo)
+    Spinner spinToInvoiceNo;
+    @BindView(R.id.rtCash)
+    RadioButton rtCash;
+    @BindView(R.id.rtCard)
+    RadioButton rtCard;
+    @BindView(R.id.rtBank)
+    RadioButton rtBank;
+    @BindView(R.id.rtVoucher)
+    RadioButton rtVoucher;
+    @BindView(R.id.customerName)
+    EditText edCustomerName;
+    @BindView(R.id.searchView)
+    Button searchView;
+    @BindView(R.id.paymentListview)
+    ListView paymentListview;
+    @BindView(R.id.grandTotalAmount)
+    TextView grandTotalAmount;
+    @BindView(R.id.tvFirst)
+    TextView tvFirst;
+    @BindView(R.id.tvPrev)
+    TextView tvPrev;
+    @BindView(R.id.tvPageNo)
+    TextView tvPageNo;
+    @BindView(R.id.tvNext)
+    TextView tvNext;
+    @BindView(R.id.tvLast)
+    TextView tvLast;
+    @BindView(R.id.llPaginationView)
+    LinearLayout llPaginationView;
+    Unbinder unbinder;
+    @BindView(R.id.rgGroup1)
+    RadioGroup rgGroup1;
+    private Activity activity;
+    private SharedPreference sharedPreference;
+    private String serverUrl, itemStatus;
+    private ServiceHandler serviceHandler;
+    private boolean isInternetPresent = false;
+    private String frmDate = "", toDate = "",paymentMode="";
+    private List<Object> fromObjectList = new ArrayList<>();
+    private List<Object> toObjectList = new ArrayList<>();
+    private SalesList salesListData = null;
+    private List<CustomerList> customerList = new ArrayList<>();
+    Customer selected_customer;
+    private Long customerId, sFromId, sToId;
+    private Long pageNo = 0L;
+    private List<SalesReportList> dataList;
+    private SalesPaymentReportAdapter adapter;
+
+    public static Fragment_Sales_PaymentReport newInstance() {
+        Fragment_Sales_PaymentReport fragment = new Fragment_Sales_PaymentReport();
+        return fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        activity = (Activity) context;
+    }
+
+    //Overriden method onCreateView
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_reportsales_paymentreport, container, false);
+        unbinder = ButterKnife.bind(this, view);
+        initComponentview(view);
+        return view;
+    }
+
+    private void initComponentview(View view) {
+        sharedPreference = SharedPreference.getInstance(activity);
+        serverUrl = UtilView.getUrl(activity);
+        serviceHandler = new ServiceHandler(activity);
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+        SimpleDateFormat df3 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        String formattedDate3 = df3.format(calendar.getTime());
+
+        calendar.set(year, month, day);
+        frmDate = df3.format(calendar.getTime());
+        toDate = df3.format(calendar.getTime());
+        ;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Date d = null;
+        try {
+            d = df3.parse(frmDate);
+            edFromDate.setText(dateFormat.format(d));
+            edToDate.setText(dateFormat.format(d));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String companyData = sharedPreference.getData(Constant.COMPANYDATA);
+
+        if (companyData != null) {
+            Gson gson = new Gson();
+            CompanyDetails companyDetails = gson.fromJson(companyData.toString(), CompanyDetails.class);
+            if (companyDetails != null) {
+                Log.e("companyData", String.valueOf(companyDetails.getStartyear()));
+                DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+
+                long milliSeconds = Long.parseLong(String.valueOf(companyDetails.getStartyear()));
+
+                Calendar calen = Calendar.getInstance();
+                calen.setTimeInMillis(milliSeconds);
+                Log.e("companyDate", formatter.format(calen.getTime()));
+                edFromDate.setText(formatter.format(calen.getTime()));
+
+                DateFormat simple = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                Date result = new Date(milliSeconds);
+                frmDate = simple.format(result);
+            }
+        }
+        callOnLoadPageData();
+
+        LayoutInflater inflater = activity.getLayoutInflater();
+        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.report_sales_payment_report_view, null, false);
+        TextView tvSalesDate = header.findViewById(R.id.tvSalesDate);
+        TextView tvSalesInvoiceNo = header.findViewById(R.id.tvSalesInvoiceNo);
+        TextView tvCustomerName = header.findViewById(R.id.tvCustomerName);
+        TextView tvInvoiceAmount = header.findViewById(R.id.tvInvoiceAmount);
+        TextView tvAmountPaid = header.findViewById(R.id.tvAmountPaid);
+        TextView tvArBalanc = header.findViewById(R.id.tvArBalanc);
+        tvSalesDate.setText("Inv Date");
+        tvSalesInvoiceNo.setText("Sales Invoice No");
+        tvCustomerName.setText("Customer Name");
+        tvInvoiceAmount.setText("Invoice Amount");
+        tvAmountPaid.setText("Amount Paid");
+        tvArBalanc.setText("ArBalance");
+        UtilView.setTextAppearanceSmall(activity, tvSalesDate);
+        UtilView.setTextAppearanceSmall(activity, tvSalesInvoiceNo);
+        UtilView.setTextAppearanceSmall(activity, tvCustomerName);
+        UtilView.setTextAppearanceSmall(activity, tvInvoiceAmount);
+        UtilView.setTextAppearanceSmall(activity, tvAmountPaid);
+        UtilView.setTextAppearanceSmall(activity, tvArBalanc);
+        UtilView.setTextColor(getResources().getColor(R.color.colorBlack), tvSalesDate);
+        UtilView.setTextColor(getResources().getColor(R.color.colorBlack), tvSalesInvoiceNo);
+        UtilView.setTextColor(getResources().getColor(R.color.colorBlack), tvCustomerName);
+        UtilView.setTextColor(getResources().getColor(R.color.colorBlack), tvInvoiceAmount);
+        UtilView.setTextColor(getResources().getColor(R.color.colorBlack), tvAmountPaid);
+        UtilView.setTextColor(getResources().getColor(R.color.colorBlack), tvArBalanc);
+
+        if (paymentListview != null)
+            paymentListview.addHeaderView(header);
+
+        getSalesPaymentReportList("", true, false, "0", false, false);
+
+
+        spinFromInvoiceNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Object obj = fromObjectList.get(position);
+                if (obj instanceof SalesList) {
+                    spinFromInvoiceNo.setSelection(position);
+                    salesListData = (SalesList) spinFromInvoiceNo.getSelectedItem();
+
+                    sFromId = salesListData.getSqid();
+                    //Toast.makeText(activity, "sFromId"+sFromId, Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinToInvoiceNo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Object obj = toObjectList.get(position);
+                if (obj instanceof SalesList) {
+                    spinToInvoiceNo.setSelection(position);
+                    salesListData = (SalesList) spinToInvoiceNo.getSelectedItem();
+                    sToId = salesListData.getSqid();
+                    // Toast.makeText(activity, "sToId"+sToId, Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        edCustomerName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, Activity_Customer.class);
+                startActivityForResult(intent, Constant.RESQUSTCODE_CUSTOMERS);
+            }
+        });
+
+
+        searchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSalesPaymentReportList("search", true, false, "0", false, false);
+
+            }
+        });
+
+
+        onRadioButtonPaymentClicked(view);
+    }
+
+    public void onRadioButtonPaymentClicked(View v) {
+        rgGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch(checkedId) {
+                    case R.id.rtCash:
+                        paymentMode="cashPaymentMode";
+                        break;
+                    case R.id.rtCard:
+                        paymentMode="cardPaymentMode";
+                        break;
+                    case R.id.rtBank:
+                        paymentMode="bankPaymentMode";
+                        break;
+                    case R.id.rtVoucher:
+                        paymentMode="voucherPaymentMode";
+                        break;
+
+                }
+            }
+        });
+
+
+    }
+
+    private void getSalesPaymentReportList(String search, boolean isFirst, boolean isPrev, String pageNumber, boolean isNext, boolean isLast) {
+        String url = "";
+        if (search.equals("search")) {
+            url = serverUrl + "/reports/sales/" + Constant.FUNTION_SALESREPORTPAYMENTREPORTLIST + "?customerId=" + customerId + "&filterApplied=true&firstPage=" + isFirst + "&fromDate=" + frmDate + "&fromSID=" + sFromId + "&lastPage=" + isLast + "&nextPage=" + isNext + "&pageNo=" + pageNo + "&prevPage=" + isPrev + "&paymentId=0&paymentMode="+paymentMode+"&toDate=" + toDate + "&toSID=" + sToId;
+        } else {
+            url = serverUrl + "/reports/sales/" + Constant.FUNTION_SALESREPORTPAYMENTREPORTLIST;
+        }
+        if (serverUrl != null) {
+            isInternetPresent = serviceHandler.isConnectingToInternet();
+            if (isInternetPresent) {
+                UtilView.showProgessBar(activity, progressBar);
+                GetDataTask task = new GetDataTask(activity, new AsyncTaskCompleteListener<String>() {
+                    @Override
+                    public void onTaskComplete(String result) {
+                        UtilView.hideProgessBar(activity, progressBar);
+                        if (result != null) {
+                            Gson gson = new Gson();
+                            try {
+                                Log.e("result", result.toString());
+                                dataList = new ArrayList<>();
+
+                                SalesReportQuotationList data = gson.fromJson(result.toString(), SalesReportQuotationList.class);
+                                if (data != null) {
+                                    if (data != null) {
+                                        setUpView(data);
+                                        if (data.getSalesReportList() != null && data.getSalesReportList().size() > 0) {
+                                            dataList = data.getSalesReportList();
+                                            adapter = new SalesPaymentReportAdapter(activity, dataList);
+                                            if (paymentListview != null)
+                                                paymentListview.setAdapter(adapter);
+
+                                            adapter.notifyDataSetChanged();
+                                            Double grandTotal = 0.00;
+                                            if (dataList != null && dataList.size() > 0) {
+                                                for (int i = 0; i < dataList.size(); i++) {
+                                                    grandTotal += dataList.get(i).getTotalReceivable();
+                                                }
+
+                                            }
+                                            grandTotalAmount.setText("" + grandTotal);
+                                        } else {
+                                            dataList.clear();
+                                            adapter = new SalesPaymentReportAdapter(activity, dataList);
+                                            if (paymentListview != null)
+                                                paymentListview.setAdapter(adapter);
+                                            adapter.notifyDataSetChanged();
+                                            UtilView.showSuccessDialog("Payment report not availbale", activity);
+                                        }
+                                    }
+                                }
+                            } catch (Exception e) {
+                                UtilView.showErrorDialog(activity.getResources().getString(R.string.response_error), activity);
+                            }
+                        } else {
+                            UtilView.showErrorDialog(getResources().getString(R.string.error_null), activity);
+                        }
+                    }
+                }, false);
+                task.execute(url, "");
+            }
+            if (!isInternetPresent) {
+                UtilView.showErrorDialog(getResources().getString(R.string.intertnet_status), activity);
+            }
+        } else {
+            UtilView.gotToLogin(activity);
+        }
+    }
+
+    private void setUpView(SalesReportQuotationList data) {
+        if (llPaginationView != null)
+            llPaginationView.setVisibility(View.VISIBLE);
+        if (data.getFirst()) {
+            //  tvFirst.setBackgroundColor(getResources().getColor(R.color.paginetionButtonInvisible));
+            if (tvFirst != null) {
+                tvFirst.setTextColor(getResources().getColor(R.color.colorBlack));
+                tvFirst.setClickable(false);
+            }
+        }
+        if (!data.getFirst()) {
+            // tvFirst.setBackgroundColor(getResources().getColor(R.color.paginetionButtonVisible));
+            if (tvFirst != null) {
+                tvFirst.setTextColor(getResources().getColor(R.color.colorWhite));
+                tvFirst.setClickable(true);
+            }
+        }
+        if (data.getNext()) {
+            // tvNext.setBackgroundColor(getResources().getColor(R.color.paginetionButtonInvisible));
+            if (tvNext != null) {
+                tvNext.setTextColor(getResources().getColor(R.color.colorBlack));
+                tvNext.setClickable(false);
+            }
+        }
+        if (!data.getNext()) {
+            //  tvNext.setBackgroundColor(getResources().getColor(R.color.paginetionButtonVisible));
+            if (tvNext != null) {
+                tvNext.setTextColor(getResources().getColor(R.color.colorWhite));
+                tvNext.setClickable(true);
+            }
+        }
+        if (data.getPrev()) {
+            //  tvPrev.setBackgroundColor(getResources().getColor(R.color.paginetionButtonInvisible));
+            if (tvPrev != null) {
+                tvPrev.setTextColor(getResources().getColor(R.color.colorBlack));
+                tvPrev.setClickable(false);
+            }
+        }
+        if (!data.getPrev()) {
+            //  tvPrev.setBackgroundColor(getResources().getColor(R.color.paginetionButtonVisible));
+            if (tvPrev != null) {
+                tvPrev.setTextColor(getResources().getColor(R.color.colorWhite));
+                tvPrev.setClickable(true);
+            }
+        }
+        if (data.getLast()) {
+            //  tvLast.setBackgroundColor(getResources().getColor(R.color.paginetionButtonInvisible));
+            if (tvLast != null) {
+                tvLast.setTextColor(getResources().getColor(R.color.colorBlack));
+                tvLast.setClickable(false);
+            }
+        }
+        if (!data.getLast()) {
+            //   tvLast.setBackgroundColor(getResources().getColor(R.color.paginetionButtonVisible));
+            if (tvLast != null) {
+                tvLast.setTextColor(getResources().getColor(R.color.colorWhite));
+                tvLast.setClickable(true);
+            }
+        }
+        pageNo = data.getPageNo();
+    }
+
+    private void callOnLoadPageData() {
+        String url = serverUrl + "/reports/sales/paymentReport/" + Constant.FUNTION_SALESREPORTONLOADPAGEDATA;
+        isInternetPresent = serviceHandler.isConnectingToInternet();
+        if (serverUrl != null) {
+            if (isInternetPresent) {
+                UtilView.showProgessBar(activity, progressBar);
+                GetDataTask getDataTask = new GetDataTask(activity, new AsyncTaskCompleteListener<String>() {
+                    @Override
+                    public void onTaskComplete(String result) {
+                        UtilView.hideProgessBar(activity, progressBar);
+                        if (result != null) {
+                            if (result.toString().equals(getResources().getString(R.string.response200_sessionLost))) {
+                                UtilView.gotToLogin(activity);
+                            } else {
+                                Log.e("loadData", result.toString());
+
+                                Gson gson = new Gson();
+                                try {
+                                    SalesReportData salesReportData = gson.fromJson(result.toString(), SalesReportData.class);
+
+                                    if (salesReportData != null) {
+
+                                        if (salesReportData.getSalesList() != null) {
+                                            fromObjectList.clear();
+                                            //fromObjectList.add("Select");
+                                            fromObjectList.addAll(salesReportData.getSalesList());
+                                            UtilView.setupSalesReportAdapter(activity, spinFromInvoiceNo, fromObjectList);
+                                        }
+                                        if (salesReportData.getSalesList() != null) {
+                                            toObjectList.clear();
+                                            //toObjectList.add("Select");
+                                            toObjectList.addAll(salesReportData.getSalesList());
+                                            UtilView.setupSalesReportAdapter(activity, spinToInvoiceNo, toObjectList);
+                                        }
+
+                                        if (salesReportData.getCustomerList() != null) {
+                                            customerList.addAll(salesReportData.getCustomerList());
+                                        }
+
+
+                                    }
+
+                                } catch (Exception e) {
+                                    UtilView.showErrorDialog(getResources().getString(response_error), activity);
+                                }
+                            }
+                        } else {
+                            UtilView.showErrorDialog(getResources().getString(response_error), activity);
+                        }
+                    }
+                }, false);
+                getDataTask.execute(url, "");
+            } else {
+                UtilView.showErrorDialog(getResources().getString(R.string.intertnet_status), activity);
+            }
+        } else {
+            UtilView.gotToLogin(activity);
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == Constant.RESQUSTCODE_CUSTOMERS && resultCode == Activity.RESULT_OK) {
+            in.hiaccounts.hinext.customer.model.CustomerList cust = (in.hiaccounts.hinext.customer.model.CustomerList) data.getSerializableExtra("customer");
+            if (cust != null) {
+                selected_customer = new Customer();
+                if (cust.getCustomerName() != null && !cust.getCustomerName().equals("")) {
+                    Log.e("customername", cust.getCustomerName());
+                    edCustomerName.setText(cust.getCustomerName());
+                    selected_customer.setCustomerName(cust.getCustomerName());
+                    customerId = cust.getCustomerId();
+                    selected_customer.setCustomerId(customerId);
+
+                }
+            }
+        }
+
+
+    }
+
+    @OnClick({R.id.fromDate, R.id.toDate})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.fromDate:
+                getFromDatePicker(activity);
+                break;
+            case R.id.toDate:
+                getToDatePicker(activity);
+                break;
+
+        }
+    }
+
+    public void getFromDatePicker(Activity activity) {
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        final TimeZone utc = TimeZone.getTimeZone("UTC");
+        final SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        f.setTimeZone(utc);
+        DatePickerDialog datePickerDialog = new DatePickerDialog(activity, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                edFromDate.setText(String.valueOf(new StringBuilder().append(year).append("-").append(month + 1).append("-").append(dayOfMonth)));
+                calendar.set(year, month, dayOfMonth);
+                frmDate = f.format(calendar.getTime());
+            }
+        }, year, month, day);
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis() - 1000);
+        datePickerDialog.show();
+
+
+    }
+
+    private void getToDatePicker(Activity activity) {
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        final TimeZone utc = TimeZone.getTimeZone("UTC");
+        final SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        f.setTimeZone(utc);
+        DatePickerDialog datePickerDialog = new DatePickerDialog(activity, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                edToDate.setText(String.valueOf(new StringBuilder().append(year).append("-").append(month + 1).append("-").append(dayOfMonth)));
+                calendar.set(year, month, dayOfMonth);
+                toDate = f.format(calendar.getTime());
+            }
+        }, year, month, day);
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis() - 1000);
+        datePickerDialog.show();
+    }
+
+
+}

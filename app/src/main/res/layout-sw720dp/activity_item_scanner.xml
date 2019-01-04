@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottomView"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrey"
+            android:orientation="vertical">
+
+            <RadioGroup
+
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:paddingRight="@dimen/ed_paddingleft"
+                >
+
+                <RadioButton
+                    android:id="@+id/rbItemCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/searchItemCode"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorWhite"
+
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/rbSerialCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/searchSerialCode"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorWhite"
+
+                    />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <EditText
+
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:id="@+id/edSearchItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:background="@color/colorWhite"
+                    android:hint="Enter Item Code"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/components_margintop">
+
+                    <com.rey.material.widget.ProgressView
+                        android:id="@+id/progress_bar"
+                        android:layout_width="@dimen/progreeview_width"
+                        android:layout_height="@dimen/progreeview_height"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:pv_autostart="true"
+                        app:pv_circular="true"
+                        app:pv_progressMode="indeterminate"
+                        app:pv_progressStyle="@style/CircularProgress"
+
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/cameraPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorGrey"
+            android:text="Search"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorBlack" />
+
+        <Button
+
+            android:id="@+id/btnScan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Scan"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

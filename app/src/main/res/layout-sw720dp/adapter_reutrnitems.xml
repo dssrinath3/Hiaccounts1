@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorGrey"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <TextView
+                android:id="@+id/tv_itemname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:text="item name"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tv_itemserailnumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/tvpadding"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/layoutmargin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_quantity"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmquantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/layoutmargin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_unitprice"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmunitprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/layoutmargin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_amtex"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmamount_exclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutmargin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_taxpercantage"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmtaxpercantage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutmargin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:text="@string/item_taxamt"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmtaxamt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutmargin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_amtin"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmamount_include"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:focusable="false"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll3"
+
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/layoutmargin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_description"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:id="@+id/ed_itmdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layoutmargin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:inputType="text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/item_reutnquantity"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:layout_marginTop="@dimen/layoutmargin"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:id="@+id/ed_itmreturnquantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/component_height"
+                    android:gravity="center"
+                    android:background="@color/colorWhite"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

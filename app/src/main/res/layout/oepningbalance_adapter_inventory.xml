@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvInventoryLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvItemQuantity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvOpeningBalance"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvCalPrice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/chkbxSelection"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <TextView
+            android:id="@+id/tvItemDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="@dimen/tvpadding"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/posText" />
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/tvItemUnitprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textSize="@dimen/posText"/>
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/tvItemQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textSize="@dimen/posText" />
+
+
+
+        <TextView
+            android:textSize="@dimen/posText"
+            android:id="@+id/tvItmeTotalAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+
+            android:id="@+id/tvItmeTaxName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/tvpadding"
+            android:textColor="@color/colorBlack"
+            android:textSize="12dp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

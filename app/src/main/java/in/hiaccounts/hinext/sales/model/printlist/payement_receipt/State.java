@@ -1,0 +1,77 @@
+
+package in.hiaccounts.hinext.sales.model.printlist.payement_receipt;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+public class State implements Serializable{
+
+    @SerializedName("id")
+    @Expose
+    public long id;
+    @SerializedName("stateCode")
+    @Expose
+    public String stateCode;
+    @SerializedName("stateName")
+    @Expose
+    public String stateName;
+    @SerializedName("vehicleSeries")
+    @Expose
+    public String vehicleSeries;
+    @SerializedName("countryId")
+    @Expose
+    public CountryId countryId;
+    @SerializedName("status")
+    @Expose
+    public String status;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getStateCode() {
+        return stateCode;
+    }
+
+    public void setStateCode(String stateCode) {
+        this.stateCode = stateCode;
+    }
+
+    public String getStateName() {
+        return stateName;
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
+    }
+
+    public String getVehicleSeries() {
+        return vehicleSeries;
+    }
+
+    public void setVehicleSeries(String vehicleSeries) {
+        this.vehicleSeries = vehicleSeries;
+    }
+
+    public CountryId getCountryId() {
+        return countryId;
+    }
+
+    public void setCountryId(CountryId countryId) {
+        this.countryId = countryId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+}

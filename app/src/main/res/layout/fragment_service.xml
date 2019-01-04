@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:id="@+id/ll_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_height"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/edDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorGrey"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingLeft="@dimen/paddingmargin"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Button
+                    android:id="@+id/btnSelectItem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/paddingmargin"
+                    android:layout_weight="1"
+                    android:background="@color/colorButton"
+                    android:text="@string/select_item"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvSelectCustomer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableRight="@drawable/ic_down"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/paddingmargin"
+                    android:paddingRight="10dp"
+                    android:text="Select Customer"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/tvSelectTax"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/paddingmargin"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorBlack" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerTaxSelection"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginLeft="@dimen/layoutmargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:visibility="gone"></Spinner>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/spinnerCompanyLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"></Spinner>
+
+                <Spinner
+                    android:id="@+id/spinnerCustomerLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginLeft="@dimen/layoutmargin"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"></Spinner>
+            </LinearLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rlListview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/components_margintop"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/listviewHeadr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+
+                    <TextView
+                        android:id="@+id/tvItmename"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="Item Name"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvItemQty"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="Qty"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvItemUnitprice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="Unit Price"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvItmeTotalAmt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/tvpadding"
+                        android:text="Amount  (In Tx)"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorBlack"
+
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/chkbxSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:padding="2dp"
+                        android:visibility="invisible" />
+
+                    <!--    <RelativeLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tvItmeEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/tvpadding"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="visible"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/imageViewEdit"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_magnify_grey600_18dp" />
+
+
+                        </RelativeLayout>-->
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/listviewSelectItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/ll_total"
+                    android:layout_below="@+id/listviewHeadr"
+                    android:scrollIndicators="none"></ListView>
+                <LinearLayout
+                    android:id="@+id/ll_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/components_margintop"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            >
+
+                           <!-- <CheckBox
+                                android:layout_marginRight="3dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:id="@+id/chkBoxAdvancePayments"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/advancePayment"
+                                android:visibility="gone"
+                                android:textAppearance="?android:textAppearanceSmall" />
+
+                            <CheckBox
+                                android:layout_marginRight="3dp"
+                                android:layout_marginLeft="3dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                                android:layout_below="@+id/chkBoxAdvancePayments"
+                                android:text="@string/reveresecharageinvoice"
+                                android:visibility="gone"
+                                android:textAppearance="?android:textAppearanceSmall" />
+-->
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+
+
+                            <TextView
+                                android:id="@+id/text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="@string/total_amount"
+                                android:textAppearance="?android:textAppearanceMedium" />
+
+                            <EditText
+                                android:layout_gravity="center"
+                                android:id="@+id/edTotalAmount"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_height="@dimen/component_height"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/colorWhite"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:paddingLeft="@dimen/ed_paddingleft"
+                                android:textAppearance="?android:textAppearanceSmall" />
+
+
+
+                            <Button
+                                android:layout_gravity="center"
+                                android:id="@+id/btnDelivery"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_height="@dimen/component_height"
+                                android:layout_weight="1"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorButton"
+                                android:text="@string/delivery"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="@color/colorWhite" />
+
+                           <!-- <Button
+                                android:layout_gravity="center"
+                                android:id="@+id/btnReturnPurchase"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/component_height"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorButton"
+                                android:text="Return"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="@color/colorWhite"
+                                android:visibility="gone" />-->
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+</FrameLayout>

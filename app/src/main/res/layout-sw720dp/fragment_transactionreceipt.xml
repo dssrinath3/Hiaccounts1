@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llPageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_above="@+id/ll_BottmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llListView"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/edCalender"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:drawableRight="@drawable/ic_calender"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:paddingRight="10dp"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Spinner
+                    android:id="@+id/spinnerTaxType"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_style"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorGrey"
+                android:weightSum="2">
+
+
+                <EditText
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/edRecieptFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:drawableRight="@drawable/ic_down"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Select Reciept From"
+                    android:paddingLeft="@dimen/ed_paddingleft"
+                    android:paddingRight="10dp"
+                    android:textAppearance="?android:textAppearanceSmall" />
+                <EditText
+                    android:id="@+id/edSelectAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/component_height"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Select Account"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llListView"
+            android:layout_above="@+id/llBottomLayout">
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:dividerHeight="0dp"
+
+                android:scrollbars="none"></ListView>
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/llBottomLayout"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginBottom="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvClearAll"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Clear All"
+                        android:visibility="gone"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        tools:ignore="Suspicious0dp" />
+
+
+                    <Button
+                        android:layout_gravity="center"
+                        android:id="@+id/btnCheckout"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorButton"
+                        android:text="@string/checkout"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/progreeview_width"
+        android:layout_height="@dimen/progreeview_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+    <TextView
+        android:id="@+id/tvTryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/pleaseTryAgain"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="@dimen/paddingmargin"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/component_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/paddingmargin"
+           android:text="@string/ChangeTable"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:text="@string/FromTable"
+                android:padding="@dimen/paddingmargin"
+                android:layout_margin="@dimen/paddingmargin"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/paddingmargin"
+                android:background="@color/colorGrey"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceSmall" />
+            <Spinner
+                style="@style/spinner_style"
+                android:id="@+id/spinFromTable"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/paddingmargin"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <TextView
+                android:padding="@dimen/paddingmargin"
+                android:gravity="center"
+                android:layout_margin="@dimen/paddingmargin"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/ToTable"
+                android:layout_marginRight="@dimen/paddingmargin"
+                android:background="@color/colorGrey"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceSmall" />
+            <Spinner
+                style="@style/spinner_style"
+                android:id="@+id/spinToTable"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/paddingmargin"
+                android:paddingLeft="@dimen/ed_paddingleft"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/colorGrey"
+        android:id="@+id/llBottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/components_margintop"
+            android:background="@color/colorPrimary"></View>
+
+        <RelativeLayout
+            android:layout_margin="@dimen/paddingmargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/components_margintop">
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/save"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+            <Button
+                android:layout_toLeftOf="@+id/btnSave"
+                android:id="@+id/btnClose"
+                android:layout_marginRight="@dimen/tvpadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/component_height"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/close"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorWhite" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/components_margintop"></View>
+    </LinearLayout>
+</RelativeLayout>

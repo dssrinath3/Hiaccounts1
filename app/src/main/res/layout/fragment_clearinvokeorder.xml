@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_invokeorder_message"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/components_margintop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+
+                android:id="@+id/btn_clearorder"
+                android:textColor="@color/colorWhite"
+                android:text="Clear Orders"
+                android:background="@color/colorButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_height="@dimen/component_height" />
+
+            <View
+                android:background="@color/colorWhite"
+                android:layout_weight="0.10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:textColor="@color/colorWhite"
+                android:text="@string/dialog_cancel"
+                android:background="@color/colorButton"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/component_height"
+                android:textAppearance="?android:textAppearanceSmall"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <com.rey.material.widget.ProgressView
+
+        android:id="@+id/progress_bar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+
+
+</RelativeLayout>

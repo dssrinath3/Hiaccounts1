@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <FrameLayout
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@color/colorGrey"
+                    android:orientation="vertical">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Item Name"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemName"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Description"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemDescritpion"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llReturnQuantity"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Quantity"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:id="@+id/edReturnQuatity"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:digits="0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:text="0"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvQuantity"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Quantity"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemQuantity"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:digits="0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:text="0"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Unit Price"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemUnitPrice"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:digits=".0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Amount (Ex Tax)"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemAmtExTax"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Tax"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <TextView
+
+                            android:visibility="gone"
+                            android:id="@+id/tvItemInputtax"
+                            android:background="@color/colorGrey"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorBlack"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                        <Spinner
+
+                            android:visibility="visible"
+                            android:id="@+id/spinItemInputtax"
+                            style="@style/spinner_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Cess (%)"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edCessPercantage"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:digits=".0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Discount"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemDiscount"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:digits=".0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@id/llMoreOrLess"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTaxType"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edTaxTypeAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:text="0.00"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Cess Amount"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edCessAmt"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Total Tax"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edItemTotalTaxamt"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:digits=".0123456789"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Amount (Inc Tax)"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/itemAmtIncTax"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Serialize Number"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <Spinner
+                            android:id="@+id/spinItemSerialNumber"
+                            style="@style/spinner_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <com.rey.material.widget.ProgressView
+
+                android:id="@+id/progress_bar"
+                android:layout_width="@dimen/progreeview_width"
+                android:layout_height="@dimen/progreeview_width"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:pv_autostart="true"
+                app:pv_circular="true"
+                app:pv_progressMode="indeterminate"
+                app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+        </FrameLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:background="@color/colorGrey"
+        android:id="@+id/llBottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/components_margintop"
+        android:background="@color/colorPrimary"></View>
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/components_margintop">
+
+        <Button
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:id="@+id/btnMore"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/more"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+        <Button
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/btnLess"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/less"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@+id/btnMore"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/add"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnClose"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_height"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/close"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/components_margintop"></View>
+    </LinearLayout>
+</RelativeLayout>

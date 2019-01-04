@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@color/colorGrey"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_closingdate"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edClosingdate"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_closingmethod"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:id="@+id/edClosingmethod"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_startingperiod"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edStartingPeriod"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_curntyrfrom"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+
+                            android:id="@+id/edCurrentYrFrom"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_curntyrto"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edCurrentYrTo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:digits="1234567890"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_closingperiod"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edClosingPeriod"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_extension"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:id="@+id/edExtension"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_extensionperiod"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:id="@+id/edExtensionPeriod"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:background="@color/colorGrey"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_height"
+                        android:layout_marginTop="@dimen/components_margintop"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/companysetup_fy_gstperiod"
+                            android:textAppearance="?android:textAppearanceMedium" />
+
+                        <EditText
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:id="@+id/edGstPeriod"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Monthly"
+                            android:background="@color/colorGrey"
+                            android:paddingLeft="@dimen/ed_paddingleft"
+                            android:singleLine="true"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                        <Spinner
+                            android:visibility="gone"
+                            android:id="@+id/spinnerGstPeriod"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/spinner_style"></Spinner>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="2dp"
+                             android:layout_marginTop="@dimen/components_margintop"
+                             android:background="@color/colorPrimary"></View>
+
+                         <RelativeLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/components_margintop">
+
+
+                             <Button
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                 android:id="@+id/btnSave"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="@dimen/component_height"
+
+                                 android:layout_toLeftOf="@+id/btnClose"
+                                 android:background="@color/colorPrimary"
+                                 android:gravity="center"
+                                 android:padding="3dp"
+                                 android:text="Update"
+                                 android:textAppearance="?android:textAppearanceMedium"
+                                 android:textColor="@color/colorWhite" />
+
+
+                         </RelativeLayout>
+
+                         <View
+                             android:layout_width="match_parent"
+                             android:layout_height="2dp"
+                             android:layout_marginTop="@dimen/components_margintop"></View>-->
+
+            </LinearLayout>
+
+            <com.rey.material.widget.ProgressView
+
+                android:id="@+id/progress_bar"
+                android:layout_width="@dimen/progreeview_width"
+                android:layout_height="@dimen/progreeview_width"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:pv_autostart="true"
+                app:pv_circular="true"
+                app:pv_progressMode="indeterminate"
+                app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+
+        </FrameLayout>
+    </ScrollView>
+</RelativeLayout>
